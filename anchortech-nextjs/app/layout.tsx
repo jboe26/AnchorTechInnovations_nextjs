@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "AnchorTech Innovations",
   description:
     "Affordable web development and tech support for small businesses and organizations in the Charlotte area.",
+  verification: {
+    google: "AxqYMeMe0yO5CUlVnu1RWmmqdPzxBrdv95Jm5dUMWmQ",
+  },
 };
 
 export default function RootLayout({
