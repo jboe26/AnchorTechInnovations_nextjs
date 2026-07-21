@@ -3,7 +3,7 @@ import Link from "next/link";
 const packages = [
   {
     title: "Anchor Foundation",
-    price: "$199",
+    price: "$650",
     type: "one-time",
     subtitle: "For those getting started",
     description:
@@ -18,7 +18,7 @@ const packages = [
   },
   {
     title: "Anchor Growth",
-    price: "$349",
+    price: "$1,350",
     type: "one-time",
     subtitle: "For those strengthening their identity",
     description:
@@ -34,7 +34,7 @@ const packages = [
   },
   {
     title: "Anchor Elevate",
-    price: "$599",
+    price: "$2,995",
     type: "one-time",
     subtitle: "For those stepping into their full potential",
     description:
@@ -51,7 +51,7 @@ const packages = [
   },
   {
     title: "Anchor Alliance",
-    price: "$299/mo",
+    price: "$599/mo",
     type: "recurring",
     subtitle: "For long-term partnership and ongoing support",
     description:
@@ -82,7 +82,7 @@ const anchorCare = [
   },
   {
     name: "AnchorCare Yearly",
-    price: "$249/year",
+    price: "$429/year",
     features: [
       "Unlimited small edits",
       "Full yearly maintenance + backups",
@@ -155,7 +155,7 @@ export default function Pricing() {
             ))}
           </ul>
           <p className="text-[#3b6a96] font-semibold text-sm mt-6">
-            Most à la carte services start at $40. You'll always receive a clear
+            Most à la carte services start at $50. You'll always receive a clear
             quote before any work begins.
           </p>
         </div>
