@@ -142,10 +142,10 @@ export default function Pricing() {
 
         {/* A La Carte */}
         <div className="bg-white rounded-2xl p-8 shadow-sm mb-16">
-          <h2 className="text-2xl font-bold mb-2">
+          <h2 className="text-2xl font-bold mb-2 text-center">
             Custom À La Carte Tech Help
           </h2>
-          <p className="text-gray-500 text-sm mb-6">
+          <p className="text-gray-500 text-sm mb-6 text-center">
             For the moments when you just need one thing done — simple, direct,
             and without committing to a full package.
           </p>
@@ -154,7 +154,7 @@ export default function Pricing() {
               <li key={idx}>✓ {item}</li>
             ))}
           </ul>
-          <p className="text-[#3b6a96] font-semibold text-sm mt-6">
+          <p className="text-[#3b6a96] font-semibold text-sm mt-6 text-center">
             Most à la carte services start at $50. You'll always receive a clear
             quote before any work begins.
           </p>
