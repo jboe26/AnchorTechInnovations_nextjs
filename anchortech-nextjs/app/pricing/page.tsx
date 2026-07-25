@@ -125,7 +125,7 @@ export default function Pricing() {
             <div key={idx} className="bg-white rounded-2xl p-6 shadow-sm">
               <h2 className="text-[#3b6a96] font-bold text-xl">{pkg.title}</h2>
               <p className="text-3xl font-bold mt-1">{pkg.price}</p>
-              <p className="text-sm text-gray-400 mb-2">
+              <p className="text-sm text-black-400 mb-2">
                 {pkg.type === "recurring" ? "recurring" : "one-time"}
               </p>
               <h4 className="text-gray-500 text-sm font-semibold mb-2">
@@ -147,8 +147,7 @@ export default function Pricing() {
             Custom À La Carte Tech Help
           </h2>
           <p className="text-gray-500 text-sm mb-6 text-center">
-            For the moments when you just need one thing done — simple, direct,
-            and without committing to a full package.
+            For the moments when you just need one thing done, simple, direct, and without committing to a full package.
           </p>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
             {aLaCarte.map((item, idx) => (
