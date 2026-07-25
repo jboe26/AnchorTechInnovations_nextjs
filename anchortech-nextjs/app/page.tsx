@@ -75,7 +75,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <p className="text-gray-500 mt-4 max-w-xl text-center">Just need one thing fixed? We also offer à la carte tech help from $50, plus AnchorCare ongoing support plans.</p>
+        {/* <p className="text-gray-500 mt-4 max-w-xl text-center">Just need one thing fixed? We also offer à la carte tech help from $50, plus AnchorCare ongoing support plans.</p> */}
         <Link
           href="/pricing"
           className="mt-10 inline-block border-2 border-[#3b6a96] text-[#3b6a96] px-8 py-3 rounded-full font-semibold hover:bg-[#3b6a96] hover:text-white transition"
