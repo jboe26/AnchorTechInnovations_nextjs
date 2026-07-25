@@ -30,7 +30,7 @@ export default function Home() {
       {/* Hero */}
       <section className="flex flex-col items-center justify-center min-h-screen">
         <Image
-          src="/logo2.png"
+          src="/logo2.webp"
           alt="AnchorTech Innovations"
           width={200}
           height={200}
