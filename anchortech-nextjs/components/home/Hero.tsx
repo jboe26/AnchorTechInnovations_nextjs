@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { heroContainer, heroItem } from "@/lib/motion";
@@ -60,6 +61,13 @@ export default function Hero() {
                 <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
                 <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
                 <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
+                <Image
+                  src="/logo-icon-white.png"
+                  alt=""
+                  width={16}
+                  height={16}
+                  className="ml-auto h-4 w-4 opacity-70"
+                />
               </div>
               <div className="space-y-1.5 px-6 py-8 font-mono text-sm leading-relaxed text-anchor-paper/90">
                 <p className="text-anchor-slate">{"// AnchorTech Innovations"}</p>

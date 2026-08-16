@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -14,8 +15,15 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-anchor-paper hover:text-anchor-accent transition"
+          className="flex items-center gap-2.5 font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-anchor-paper transition hover:text-anchor-accent"
         >
+          <Image
+            src="/logo-icon-white.png"
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
           AnchorTech Innovations
         </Link>
 
