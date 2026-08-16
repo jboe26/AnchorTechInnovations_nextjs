@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Section from "@/components/home/Section";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -28,99 +29,118 @@ export default function Contact() {
     }
   };
 
+  const inputClass =
+    "w-full rounded-md border border-anchor-slate/30 bg-white/[0.05] px-4 py-3 text-anchor-paper placeholder:text-anchor-slate outline-none transition focus:border-anchor-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent";
+
+  const labelClass =
+    "mb-1.5 block font-mono text-xs tracking-wider text-anchor-slate";
+
   return (
-    <main className="bg-[#e8e8e8] min-h-screen px-6 py-16">
-      <div className="max-w-2xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold">Start the Conversation</h1>
-          <p className="text-gray-500 mt-3 max-w-lg mx-auto">
-            Every project starts with a simple conversation. Share a bit about
-            what you need, and we'll explore how AnchorTech can help — without
-            the overwhelm.
+    <main>
+      <section className="bg-anchor-paper text-anchor-ink">
+        <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
+          <p className="font-mono text-sm tracking-wide text-anchor-ink/70">
+            AnchorTech Innovations // contact
+          </p>
+          <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+            Start the conversation.
+          </h1>
+          <p className="mt-6 text-lg leading-relaxed text-anchor-ink/70">
+            Every project starts with a simple conversation. Share a bit
+            about what you need, and we&apos;ll explore how AnchorTech can
+            help without the overwhelm.
           </p>
         </div>
+      </section>
 
-        {/* Contact Info */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm mb-8 space-y-4">
-          <div>
-            <p className="text-sm text-gray-400 mb-1">Email</p>
-            <a
-              href="mailto:joshboepple@anchortech.org"
-              className="text-[#3b6a96] font-semibold"
-            >
-              joshboepple@anchortech.org
-            </a>
+      <Section id="get-in-touch" index={1} label="get in touch" bg="dark">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
+          {/* Contact Info */}
+          <div className="space-y-6 rounded-lg border border-anchor-slate/30 bg-white/[0.05] p-6 h-fit">
+            <div>
+              <p className="font-mono text-xs tracking-wider text-anchor-slate">
+                email
+              </p>
+              <a
+                href="mailto:joshboepple@anchortech.org"
+                className="mt-1 inline-block font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent"
+              >
+                joshboepple@anchortech.org
+              </a>
+            </div>
+            <div>
+              <p className="font-mono text-xs tracking-wider text-anchor-slate">
+                location
+              </p>
+              <p className="mt-1 text-anchor-paper/80">
+                Pineville, NC, serving the greater Charlotte area
+              </p>
+            </div>
+            <div>
+              <p className="font-mono text-xs tracking-wider text-anchor-slate">
+                availability
+              </p>
+              <p className="mt-1 text-anchor-paper/80">
+                Open to freelance projects, consulting, and ongoing
+                partnerships.
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-sm text-gray-400 mb-1">Location</p>
-            <p className="text-gray-600">
-              Pineville, NC — serving the greater Charlotte area
-            </p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-400 mb-1">Availability</p>
-            <p className="text-gray-600">
-              Open to freelance projects, consulting, and ongoing partnerships.
-            </p>
+
+          {/* Form */}
+          <div className="rounded-lg border border-anchor-slate/30 bg-white/[0.05] p-6 sm:p-8">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-paper">
+              Send a message
+            </h2>
+            <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+              <div>
+                <label className={labelClass}>your name</label>
+                <input
+                  type="text"
+                  placeholder="How should we address you?"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className={labelClass}>your email</label>
+                <input
+                  type="email"
+                  placeholder="Where should we reply?"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className={inputClass}
+                />
+              </div>
+              <div>
+                <label className={labelClass}>message</label>
+                <textarea
+                  placeholder="Tell us about your project, your challenges, or what kind of support you're looking for."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={5}
+                  required
+                  className={inputClass}
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full rounded-md bg-anchor-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent"
+              >
+                Send message
+              </button>
+              {status && (
+                <p className="mt-2 text-center text-sm text-anchor-paper/80">
+                  {status}
+                </p>
+              )}
+            </form>
           </div>
         </div>
-
-        {/* Form */}
-        <div className="bg-white rounded-2xl p-8 shadow-sm">
-          <h2 className="text-xl font-bold mb-6">Send a Message</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label className="text-sm text-gray-500 mb-1 block">
-                Your Name
-              </label>
-              <input
-                type="text"
-                placeholder="How should we address you?"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 placeholder:text-gray-300 outline-none focus:border-[#3b6a96] transition"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-gray-500 mb-1 block">
-                Your Email
-              </label>
-              <input
-                type="email"
-                placeholder="Where should we reply?"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 placeholder:text-gray-300 outline-none focus:border-[#3b6a96] transition"
-              />
-            </div>
-            <div>
-              <label className="text-sm text-gray-500 mb-1 block">
-                Message
-              </label>
-              <textarea
-                placeholder="Tell us about your project, your challenges, or what kind of support you're looking for."
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                rows={5}
-                required
-                className="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 placeholder:text-gray-300 outline-none focus:border-[#3b6a96] transition"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-[#3b6a96] text-white py-3 rounded-full font-semibold hover:opacity-90 transition"
-            >
-              Send Message
-            </button>
-            {status && (
-              <p className="text-center text-sm text-gray-500 mt-2">{status}</p>
-            )}
-          </form>
-        </div>
-      </div>
+      </Section>
     </main>
   );
 }

@@ -4,6 +4,13 @@
   --background: #E4E4E4;
   --foreground: #171717;
   --brand-blue: #3b6a96;
+
+  /* AnchorTech homepage redesign tokens */
+  --anchor-ink: #1E2A38;
+  --anchor-paper: #F5F5F2;
+  --anchor-deep: #245F94;
+  --anchor-accent: #388CD8;
+  --anchor-slate: #788C9F;
 }
 
 @theme inline {
@@ -11,6 +18,13 @@
   --color-foreground: var(--foreground);
   --color-brand-blue: var(--brand-blue);
   --font-sans: var(--font-montserrat);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --color-anchor-ink: var(--anchor-ink);
+  --color-anchor-paper: var(--anchor-paper);
+  --color-anchor-deep: var(--anchor-deep);
+  --color-anchor-accent: var(--anchor-accent);
+  --color-anchor-slate: var(--anchor-slate);
 }
 
 body {

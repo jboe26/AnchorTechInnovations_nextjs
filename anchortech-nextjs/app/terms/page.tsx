@@ -1,13 +1,25 @@
+import Link from "next/link";
+import Section from "@/components/home/Section";
+
 export default function Terms() {
   return (
-    <main className="bg-[#e8e8e8] min-h-screen px-6 py-16">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold">Terms of Use</h1>
-          <p className="text-gray-500 mt-3">Last updated: August 13, 2026</p>
+    <main>
+      <section className="bg-anchor-paper text-anchor-ink">
+        <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 text-center md:px-10 md:pt-32 md:pb-20">
+          <p className="font-mono text-sm tracking-wide text-anchor-ink/70">
+            AnchorTech Innovations // terms of use
+          </p>
+          <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+            Terms of Use
+          </h1>
+          <p className="mt-4 font-mono text-sm text-anchor-slate">
+            Last updated: August 13, 2026
+          </p>
         </div>
+      </section>
 
-        <div className="bg-white rounded-2xl p-8 shadow-sm space-y-8 text-gray-700 leading-relaxed">
+      <Section id="terms" index={1} label="terms of use" bg="light">
+        <div className="max-w-3xl space-y-10 rounded-lg border border-anchor-slate/30 bg-white p-8 leading-relaxed text-anchor-ink/80 sm:p-10">
           <section>
             <p>
               These Terms of Use (&ldquo;Terms&rdquo;) govern your use of
@@ -20,7 +32,7 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Using the App
             </h2>
             <p>
@@ -33,7 +45,7 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Appointments and Requests
             </h2>
             <p>
@@ -46,7 +58,7 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Acceptable Use
             </h2>
             <ul className="list-disc list-inside space-y-2">
@@ -58,7 +70,7 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Account Termination
             </h2>
             <p>
@@ -69,7 +81,7 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Disclaimer &amp; Limitation of Liability
             </h2>
             <p>
@@ -81,7 +93,7 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Changes to These Terms
             </h2>
             <p>
@@ -92,26 +104,29 @@ export default function Terms() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#3b6a96] mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
               Contact Us
             </h2>
             <p>
               Questions about these Terms can be sent to{" "}
               <a
                 href="mailto:joshboepple@anchortech.org"
-                className="text-[#3b6a96] font-semibold"
+                className="font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent"
               >
                 joshboepple@anchortech.org
               </a>
               . See also our{" "}
-              <a href="/privacy" className="text-[#3b6a96] font-semibold">
+              <Link
+                href="/privacy"
+                className="font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent"
+              >
                 Privacy Policy
-              </a>
+              </Link>
               .
             </p>
           </section>
         </div>
-      </div>
+      </Section>
     </main>
   );
 }
