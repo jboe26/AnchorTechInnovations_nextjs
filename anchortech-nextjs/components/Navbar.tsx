@@ -16,7 +16,7 @@ export default function Navbar() {
           href="/"
           className="font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-anchor-paper hover:text-anchor-accent transition"
         >
-          AnchorTech
+          AnchorTech Innovations
         </Link>
 
         {/* Desktop Menu */}
@@ -54,13 +54,25 @@ export default function Navbar() {
           <Link href="/" className={linkClass} onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <Link href="/about" className={linkClass} onClick={() => setIsOpen(false)}>
+          <Link
+            href="/about"
+            className={linkClass}
+            onClick={() => setIsOpen(false)}
+          >
             About
           </Link>
-          <Link href="/pricing" className={linkClass} onClick={() => setIsOpen(false)}>
+          <Link
+            href="/pricing"
+            className={linkClass}
+            onClick={() => setIsOpen(false)}
+          >
             Pricing
           </Link>
-          <Link href="/contact" className={linkClass} onClick={() => setIsOpen(false)}>
+          <Link
+            href="/contact"
+            className={linkClass}
+            onClick={() => setIsOpen(false)}
+          >
             Contact
           </Link>
         </div>
