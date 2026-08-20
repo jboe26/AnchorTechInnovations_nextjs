@@ -35,14 +35,11 @@ export default function Privacy() {
             </h2>
             <ul className="list-disc list-inside space-y-2">
               <li>
-                <span className="font-semibold">Account information:</span>{" "}
-                your name, email address, and password when you create an
-                account or sign in.
-              </li>
-              <li>
                 <span className="font-semibold">Booking information:</span>{" "}
-                appointment dates, times, and any notes you provide when you
-                schedule or manage a booking.
+                your name, email address, appointment dates and times, and
+                any notes you provide when you schedule an appointment or
+                submit an after-hours request. No account or password is
+                required to use the App.
               </li>
               <li>
                 <span className="font-semibold">Push notification data:</span>{" "}
@@ -67,8 +64,7 @@ export default function Privacy() {
               How We Use Information
             </h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>To create and secure your account</li>
-              <li>To schedule, confirm, reschedule, or cancel appointments</li>
+              <li>To schedule and confirm appointments</li>
               <li>To send appointment reminders and service-related notifications</li>
               <li>To respond to support requests and questions</li>
               <li>To maintain the security and reliability of the Services</li>
@@ -80,10 +76,10 @@ export default function Privacy() {
               How Information Is Stored
             </h2>
             <p>
-              Account, booking, and messaging data is stored using Supabase,
-              a third-party database and authentication provider, on
-              infrastructure they manage on our behalf. We do not sell your
-              personal information to third parties.
+              Booking and messaging data is stored using Supabase, a
+              third-party database provider, on infrastructure they manage
+              on our behalf. We do not sell your personal information to
+              third parties.
             </p>
           </section>
 
@@ -92,9 +88,8 @@ export default function Privacy() {
               Your Choices
             </h2>
             <p>
-              You can update your account information from within the App at
-              any time. To request deletion of your account and associated
-              data, or to ask any question about this policy, contact us at{" "}
+              To request deletion of your booking information, or to ask any
+              question about this policy, contact us at{" "}
               <a
                 href="mailto:joshboepple@anchortech.org"
                 className="font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent"

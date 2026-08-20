@@ -26,8 +26,7 @@ export default function Terms() {
               AnchorTech Connect (the &ldquo;App&rdquo;) and related
               websites and services provided by AnchorTech Innovations LLC
               (&ldquo;AnchorTech,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;).
-              By creating an account or using the App, you agree to these
-              Terms.
+              By using the App, you agree to these Terms.
             </p>
           </section>
 
@@ -36,11 +35,10 @@ export default function Terms() {
               Using the App
             </h2>
             <p>
-              You must provide accurate information when creating an account
-              and are responsible for keeping your login credentials secure.
-              You agree to use the App only for its intended purpose:
-              scheduling appointments, communicating with AnchorTech, and
-              accessing support resources.
+              You must provide accurate information when booking an
+              appointment or submitting a support request. You agree to use
+              the App only for its intended purpose: scheduling appointments,
+              communicating with AnchorTech, and accessing support resources.
             </p>
           </section>
 
@@ -64,19 +62,19 @@ export default function Terms() {
             <ul className="list-disc list-inside space-y-2">
               <li>Do not use the App for any unlawful purpose</li>
               <li>Do not attempt to interfere with or disrupt the App or its underlying services</li>
-              <li>Do not attempt to access another user&rsquo;s account or data</li>
+              <li>Do not attempt to access another user&rsquo;s booking or data</li>
               <li>Do not submit abusive, harassing, or fraudulent content through chat, FAQs, or booking notes</li>
             </ul>
           </section>
 
           <section>
             <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
-              Account Termination
+              Access
             </h2>
             <p>
-              We may suspend or terminate access to the App for violations of
+              We may suspend or restrict access to the App for violations of
               these Terms. You may stop using the App and request deletion of
-              your account at any time by contacting us.
+              your booking data at any time by contacting us.
             </p>
           </section>
 
