@@ -46,12 +46,11 @@ export default function Privacy() {
                 a device push token and platform (iOS/Android), used solely
                 to deliver appointment reminders and updates to your device.
               </li>
-              <li>
-                <span className="font-semibold">Support messages:</span> the
-                content of messages you send through in-app chat or FAQ
-                features.
-              </li>
             </ul>
+            <p className="mt-3">
+              Chat messages with our in-app assistant are stored only on your
+              device and are never sent to or stored on our servers.
+            </p>
             <p className="mt-3">
               We do not collect your precise location, contacts, photos, or
               browsing history, and we do not use the App to serve
@@ -76,28 +75,43 @@ export default function Privacy() {
               How Information Is Stored
             </h2>
             <p>
-              Booking and messaging data is stored using Supabase, a
+              Booking and push notification data is stored using Supabase, a
               third-party database provider, on infrastructure they manage
               on our behalf. We do not sell your personal information to
               third parties.
             </p>
           </section>
 
-          <section>
+          <section id="data-deletion">
             <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
-              Your Choices
+              Request Deletion of Your Data (AnchorTech Connect)
             </h2>
             <p>
-              To request deletion of your booking information, or to ask any
-              question about this policy, contact us at{" "}
+              To request deletion of the data AnchorTech Innovations holds
+              about you from the AnchorTech Connect app, email{" "}
               <a
-                href="mailto:joshboepple@anchortech.org"
+                href="mailto:joshboepple@anchortech.org?subject=Data%20deletion%20request"
                 className="font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent"
               >
                 joshboepple@anchortech.org
-              </a>
-              . We will respond to deletion requests within a reasonable
-              time.
+              </a>{" "}
+              with the subject line &ldquo;Data deletion request&rdquo; and
+              the name and/or email address used when booking. We will
+              confirm and complete the deletion within 30 days.
+            </p>
+            <p className="mt-3">
+              <span className="font-semibold">What gets deleted:</span> your
+              name, email address, and appointment/booking records stored in
+              our database, along with any device push token associated with
+              your account.
+            </p>
+            <p className="mt-3">
+              <span className="font-semibold">What is retained:</span> chat
+              history is never sent to us in the first place &mdash; it lives
+              only on your device and is deleted automatically when you
+              delete a conversation or uninstall the app. We may retain
+              minimal records (e.g. an anonymized log that a deletion request
+              was made) as required for legal or accounting purposes.
             </p>
           </section>
 
