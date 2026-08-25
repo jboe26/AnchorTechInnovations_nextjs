@@ -11,7 +11,7 @@ export default function Navbar() {
     "font-mono text-sm tracking-wide text-anchor-paper/80 transition hover:text-anchor-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent";
 
   return (
-    <nav className="w-full border-b border-white/10 bg-anchor-ink text-anchor-paper">
+    <nav className="w-full border-b border-white/10 bg-anchor-deep text-anchor-paper">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
           href="/"
