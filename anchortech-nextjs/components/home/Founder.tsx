@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Founder() {
   return (
-    <Section id="founder" index={3} label="who's building this" bg="dark">
+    <Section id="founder" index={4} label="who's building this" bg="dark">
       <div className="grid gap-10 sm:grid-cols-[auto_1fr] sm:items-center">
         <Image
           src="/FounderPhoto.jpeg"
@@ -23,7 +23,8 @@ export default function Founder() {
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-anchor-paper/80">
             I&apos;m Josh. I build AnchorTech&apos;s sites myself, no
             subcontractors, no outsourcing. If you email AnchorTech, you&apos;re
-            emailing me.
+            emailing me. I build practical systems that bring clarity, not
+            more complexity.
           </p>
           <div className="mt-6 flex flex-wrap gap-6 font-mono text-sm">
             <a

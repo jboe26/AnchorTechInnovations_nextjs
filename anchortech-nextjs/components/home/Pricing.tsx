@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Pricing() {
   return (
-    <Section id="pricing" index={4} label="pricing" bg="light">
+    <Section id="pricing" index={5} label="pricing" bg="light">
       <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-anchor-ink sm:text-4xl">
         Pricing
       </h2>
