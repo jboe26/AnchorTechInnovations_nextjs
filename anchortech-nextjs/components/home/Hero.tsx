@@ -58,9 +58,9 @@ export default function Hero() {
           <motion.div variants={heroItem}>
             <div className="overflow-hidden rounded-xl border border-anchor-slate/30 bg-anchor-ink shadow-xl">
               <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
-                <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
-                <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
                 <Image
                   src="/logo-icon-white.png"
                   alt=""
