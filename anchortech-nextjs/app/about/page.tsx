@@ -27,12 +27,10 @@ export default function About() {
               Mission
             </h2>
             <p className="mt-3 leading-relaxed text-anchor-paper/80">
-              AnchorTech Innovations empowers individuals, businesses, and
-              organizations with practical, scalable digital solutions that
-              bring clarity to their operations and confidence to their
-              brand. Rooted in integrity and steady guidance, we build
-              systems that reflect stability, purpose, and resilience,
-              especially in seasons of uncertainty.
+              I build practical, scalable digital solutions that bring
+              clarity to your operations and confidence to your brand. I
+              work with integrity and steady guidance, building systems that
+              hold up, especially when things feel uncertain.
             </p>
           </div>
           <div>
@@ -40,28 +38,26 @@ export default function About() {
               Vision
             </h2>
             <p className="mt-3 leading-relaxed text-anchor-paper/80">
-              Our vision is to be the trusted partner for individuals and
-              organizations across North Carolina and beyond. We aim to be
-              known for thoughtful leadership, personal connection, and
-              solutions that strengthen identity and support long-term
-              growth. AnchorTech stands as a steady presence in a shifting
-              world, meeting clients where they are and helping them move
-              forward with clarity.
+              I want AnchorTech to be the trusted partner for individuals
+              and organizations across North Carolina and beyond, known for
+              thoughtful guidance, personal connection, and solutions that
+              support real growth. I meet clients where they are and help
+              them move forward with clarity.
             </p>
           </div>
         </div>
       </Section>
 
-      <Section id="who-we-serve" index={2} label="who we serve" bg="light">
+      <Section id="who-we-serve" index={2} label="who I serve" bg="light">
         <div className="max-w-2xl">
           <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-anchor-ink">
-            Who we serve
+            Who I serve
           </h2>
           <p className="mt-3 leading-relaxed text-anchor-ink/70">
-            We serve the people and organizations that make our communities
+            I work with the people and organizations that make communities
             feel like home: family-run shops, local service providers,
             nonprofits, churches, solo founders, and passionate
-            entrepreneurs. Our solutions are built for real people who need
+            entrepreneurs. Everything I build is for real people who need
             real help, without unnecessary complexity and without being
             left in the dark.
           </p>

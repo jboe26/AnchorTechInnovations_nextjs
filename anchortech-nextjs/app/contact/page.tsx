@@ -20,7 +20,7 @@ export default function Contact() {
 
     const data = await res.json();
     if (data.success) {
-      setStatus("Message sent! We'll be in touch soon.");
+      setStatus("Message sent! I'll be in touch soon.");
       setName("");
       setEmail("");
       setMessage("");
@@ -47,8 +47,8 @@ export default function Contact() {
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-anchor-ink/70">
             Every project starts with a simple conversation. Share a bit
-            about what you need, and we&apos;ll explore how AnchorTech can
-            help without the overwhelm.
+            about what you need, and I&apos;ll walk you through how
+            AnchorTech can help without the overwhelm.
           </p>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function Contact() {
                 <label className={labelClass}>your name</label>
                 <input
                   type="text"
-                  placeholder="How should we address you?"
+                  placeholder="What should I call you?"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -108,7 +108,7 @@ export default function Contact() {
                 <label className={labelClass}>your email</label>
                 <input
                   type="email"
-                  placeholder="Where should we reply?"
+                  placeholder="Where should I reply?"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -118,7 +118,7 @@ export default function Contact() {
               <div>
                 <label className={labelClass}>message</label>
                 <textarea
-                  placeholder="Tell us about your project, your challenges, or what kind of support you're looking for."
+                  placeholder="Tell me about your project, your challenges, or what kind of support you're looking for."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={5}
