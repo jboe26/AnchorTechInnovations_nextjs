@@ -8,23 +8,28 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
+  const encode = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
-    });
-
-    const data = await res.json();
-    if (data.success) {
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", name, email, message }),
+      });
       setStatus("Message sent! I'll be in touch soon.");
       setName("");
       setEmail("");
       setMessage("");
-    } else {
+    } catch {
       setStatus("Something went wrong. Please try again.");
     }
   };
@@ -92,11 +97,18 @@ export default function Contact() {
             <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-paper">
               Send a message
             </h2>
-            <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+            <form
+              name="contact"
+              data-netlify="true"
+              onSubmit={handleSubmit}
+              className="mt-6 space-y-4"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label className={labelClass}>your name</label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="What should I call you?"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -108,6 +120,7 @@ export default function Contact() {
                 <label className={labelClass}>your email</label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Where should I reply?"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -118,6 +131,7 @@ export default function Contact() {
               <div>
                 <label className={labelClass}>message</label>
                 <textarea
+                  name="message"
                   placeholder="Tell me about your project, your challenges, or what kind of support you're looking for."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
