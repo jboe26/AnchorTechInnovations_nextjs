@@ -57,7 +57,7 @@ export default function Hero() {
 
           <motion.div variants={heroItem}>
             <div className="overflow-hidden rounded-xl border border-muted/30 bg-surface-dark shadow-xl">
-              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
+              <div className="flex items-center gap-2 border-b border-white/10 bg-primary px-4 py-3">
                 <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
                 <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
                 <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
