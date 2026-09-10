@@ -10,7 +10,7 @@ export default function Founder() {
           alt="Josh Boepple"
           width={112}
           height={112}
-          className="h-28 w-28 rounded-full border border-muted/40 object-cover"
+          className="mx-auto h-28 w-28 rounded-full border border-muted/40 object-cover sm:mx-0"
         />
 
         <div>
