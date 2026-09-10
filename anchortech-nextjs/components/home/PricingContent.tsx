@@ -16,7 +16,11 @@ export default function PricingContent() {
       </div>
 
       <div className="mt-14 border-t border-muted/30 pt-14">
-        <h3 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-text sm:text-3xl">
+        <p className="font-mono text-xs tracking-wider text-muted">
+          Every build above includes a window of support. Here&apos;s what
+          happens once it ends.
+        </p>
+        <h3 className="mt-3 font-[family-name:var(--font-montserrat)] text-2xl font-bold text-text sm:text-3xl">
           Ongoing support, month to month
         </h3>
         <p className="mt-2 max-w-2xl text-sm text-text/70">
