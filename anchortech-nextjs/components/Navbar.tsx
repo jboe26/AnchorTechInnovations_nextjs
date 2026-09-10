@@ -8,14 +8,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const linkClass =
-    "font-mono text-sm tracking-wide text-anchor-paper/80 transition hover:text-anchor-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent";
+    "font-mono text-sm tracking-wide text-surface/80 transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
   return (
-    <nav className="w-full border-b border-white/10 bg-anchor-deep text-anchor-paper">
+    <nav className="w-full border-b border-white/10 bg-primary text-surface">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-anchor-paper transition hover:text-anchor-accent"
+          className="flex items-center gap-2.5 font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-surface transition hover:text-accent"
         >
           <Image
             src="/logo-icon-white.png"
@@ -50,9 +50,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
-          <span className="block w-6 h-0.5 bg-anchor-paper mb-1"></span>
-          <span className="block w-6 h-0.5 bg-anchor-paper mb-1"></span>
-          <span className="block w-6 h-0.5 bg-anchor-paper"></span>
+          <span className="block w-6 h-0.5 bg-surface mb-1"></span>
+          <span className="block w-6 h-0.5 bg-surface mb-1"></span>
+          <span className="block w-6 h-0.5 bg-surface"></span>
         </button>
       </div>
 

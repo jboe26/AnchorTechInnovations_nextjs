@@ -29,22 +29,22 @@ const reasons = [
 export default function WhyWorkTogether() {
   return (
     <Section id="why" index={1} label="why work together" bg="light">
-      <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-anchor-ink sm:text-4xl">
+      <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
         Reasons to work with AnchorTech.
       </h2>
       <div className="mt-10 grid gap-5 sm:grid-cols-2">
         {reasons.map((reason) => (
           <div
             key={reason.number}
-            className="rounded-lg border border-anchor-slate/30 bg-white p-6 transition hover:border-anchor-accent/60"
+            className="rounded-lg border border-muted/30 bg-white p-6 transition hover:border-accent/60"
           >
-            <p className="font-mono text-xs tracking-wider text-anchor-accent">
+            <p className="font-mono text-xs tracking-wider text-accent">
               {reason.number}
             </p>
-            <h3 className="mt-2 font-[family-name:var(--font-montserrat)] text-lg font-bold text-anchor-ink">
+            <h3 className="mt-2 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text">
               {reason.title}
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-anchor-ink/70">
+            <p className="mt-3 text-sm leading-relaxed text-text/70">
               {reason.description}
             </p>
           </div>

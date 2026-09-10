@@ -3,22 +3,22 @@ import Section from "@/components/home/Section";
 export default function Privacy() {
   return (
     <main>
-      <section className="bg-anchor-paper text-anchor-ink">
+      <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 text-center md:px-10 md:pt-32 md:pb-20">
-          <p className="font-mono text-sm tracking-wide text-anchor-ink/70">
+          <p className="font-mono text-sm tracking-wide text-text/70">
             AnchorTech Innovations // privacy policy
           </p>
           <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             Privacy Policy
           </h1>
-          <p className="mt-4 font-mono text-sm text-anchor-slate">
+          <p className="mt-4 font-mono text-sm text-muted">
             Last updated: August 13, 2026
           </p>
         </div>
       </section>
 
       <Section id="policy" index={1} label="privacy policy" bg="light">
-        <div className="max-w-3xl space-y-10 rounded-lg border border-anchor-slate/30 bg-white p-8 leading-relaxed text-anchor-ink/80 sm:p-10">
+        <div className="max-w-3xl space-y-10 rounded-lg border border-muted/30 bg-white p-8 leading-relaxed text-text/80 sm:p-10">
           <section>
             <p>
               This Privacy Policy explains how AnchorTech Innovations
@@ -30,7 +30,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               Information We Collect
             </h2>
             <ul className="list-disc list-inside space-y-2">
@@ -59,7 +59,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               How We Use Information
             </h2>
             <ul className="list-disc list-inside space-y-2">
@@ -71,7 +71,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               How Information Is Stored
             </h2>
             <p>
@@ -83,7 +83,7 @@ export default function Privacy() {
           </section>
 
           <section id="data-deletion">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               Request Deletion of Your Data (AnchorTech Connect)
             </h2>
             <p>
@@ -91,7 +91,7 @@ export default function Privacy() {
               about you from the AnchorTech Connect app, email{" "}
               <a
                 href="mailto:joshboepple@anchortech.org?subject=Data%20deletion%20request"
-                className="font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent"
+                className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
               >
                 joshboepple@anchortech.org
               </a>{" "}
@@ -116,7 +116,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               Children&rsquo;s Privacy
             </h2>
             <p>
@@ -127,7 +127,7 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               Changes to This Policy
             </h2>
             <p>
@@ -138,14 +138,14 @@ export default function Privacy() {
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-deep mb-3">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
               Contact Us
             </h2>
             <p>
               Questions about this policy or your data can be sent to{" "}
               <a
                 href="mailto:joshboepple@anchortech.org"
-                className="font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent"
+                className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
               >
                 joshboepple@anchortech.org
               </a>

@@ -5,23 +5,23 @@ import type { Project } from "@/lib/data/projects";
 
 export default function ProjectCard({ name, description, href, status }: Project) {
   const cardClass =
-    "block rounded-lg border border-anchor-slate/30 bg-white p-6 shadow-sm transition hover:border-anchor-accent/60 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent";
+    "block rounded-lg border border-muted/30 bg-white p-6 shadow-sm transition hover:border-accent/60 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
   const content = (
     <>
-      <h3 className="font-[family-name:var(--font-montserrat)] text-lg font-bold text-anchor-deep">
+      <h3 className="font-[family-name:var(--font-montserrat)] text-lg font-bold text-primary">
         {name}
       </h3>
-      <p className="mt-3 text-sm leading-relaxed text-anchor-ink/70">
+      <p className="mt-3 text-sm leading-relaxed text-text/70">
         {description}
       </p>
       {href ? (
-        <span className="mt-4 inline-block font-mono text-xs tracking-wide text-anchor-accent">
+        <span className="mt-4 inline-block font-mono text-xs tracking-wide text-accent">
           view project &rarr;
         </span>
       ) : (
         status && (
-          <span className="mt-4 inline-block font-mono text-xs tracking-wide text-anchor-ink/70">
+          <span className="mt-4 inline-block font-mono text-xs tracking-wide text-text/70">
             {status}
           </span>
         )
