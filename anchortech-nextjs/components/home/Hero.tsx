@@ -42,7 +42,7 @@ export default function Hero() {
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
               <Link
                 href="/pricing"
-                className="rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 View pricing
               </Link>
@@ -73,22 +73,22 @@ export default function Hero() {
                 <p className="text-surface/60">{"// AnchorTech Innovations"}</p>
                 <p className="text-surface/60">{"// built by one developer"}</p>
                 <p className="pt-4">
-                  <span className="text-accent">const</span> project ={" "}
+                  <span className="text-accent-on-dark">const</span> project ={" "}
                   {"{"}
                 </p>
                 <p className="pl-4">
-                  client: <span className="text-accent">&quot;you&quot;</span>,
+                  client: <span className="text-accent-on-dark">&quot;you&quot;</span>,
                 </p>
                 <p className="pl-4">
                   scope:{" "}
-                  <span className="text-accent">
+                  <span className="text-accent-on-dark">
                     &quot;exactly what you need&quot;
                   </span>
                   ,
                 </p>
                 <p className="pl-4">
                   handoff:{" "}
-                  <span className="text-accent">
+                  <span className="text-accent-on-dark">
                     &quot;direct, no middleman&quot;
                   </span>
                   ,

@@ -28,7 +28,7 @@ export default function SupportPlanCard({
     >
       <p
         className={`font-mono text-xs tracking-wider ${
-          isDark ? "text-accent" : "text-text/70"
+          isDark ? "text-accent-on-dark" : "text-text/70"
         }`}
       >
         {name}
@@ -86,7 +86,9 @@ export default function SupportPlanCard({
       >
         {features.map((feature) => (
           <li key={feature} className="flex gap-2">
-            <span className="text-accent">&#10003;</span>
+            <span className={isDark ? "text-accent-on-dark" : "text-accent-strong"}>
+              &#10003;
+            </span>
             <span>{feature}</span>
           </li>
         ))}

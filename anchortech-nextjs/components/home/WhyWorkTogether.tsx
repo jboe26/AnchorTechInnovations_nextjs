@@ -38,7 +38,7 @@ export default function WhyWorkTogether() {
             key={reason.number}
             className="rounded-lg border border-muted/30 bg-white p-6 transition hover:border-accent/60"
           >
-            <p className="font-mono text-xs tracking-wider text-accent">
+            <p className="font-mono text-xs tracking-wider text-accent-strong">
               {reason.number}
             </p>
             <h3 className="mt-2 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text">

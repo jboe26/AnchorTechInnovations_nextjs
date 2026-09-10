@@ -5,7 +5,7 @@ import type { Project } from "@/lib/data/projects";
 
 export default function ProjectCard({ name, description, href, status }: Project) {
   const cardClass =
-    "block rounded-lg border border-muted/30 bg-white p-6 shadow-sm transition hover:border-accent/60 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+    "block rounded-lg border border-muted/30 bg-white p-6 shadow-sm transition hover:border-accent/60 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong";
 
   const content = (
     <>
@@ -16,7 +16,7 @@ export default function ProjectCard({ name, description, href, status }: Project
         {description}
       </p>
       {href ? (
-        <span className="mt-4 inline-block font-mono text-xs tracking-wide text-accent">
+        <span className="mt-4 inline-block font-mono text-xs tracking-wide text-accent-strong">
           view project &rarr;
         </span>
       ) : (

@@ -91,7 +91,7 @@ export default function Privacy() {
               about you from the AnchorTech Connect app, email{" "}
               <a
                 href="mailto:joshboepple@anchortech.org?subject=Data%20deletion%20request"
-                className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                className="font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong"
               >
                 joshboepple@anchortech.org
               </a>{" "}
@@ -145,7 +145,7 @@ export default function Privacy() {
               Questions about this policy or your data can be sent to{" "}
               <a
                 href="mailto:joshboepple@anchortech.org"
-                className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                className="font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong"
               >
                 joshboepple@anchortech.org
               </a>

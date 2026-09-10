@@ -8,14 +8,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const linkClass =
-    "font-mono text-sm tracking-wide text-surface/80 transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+    "font-mono text-sm tracking-wide text-surface/80 transition hover:text-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-surface";
 
   return (
     <nav className="w-full border-b border-white/10 bg-primary text-surface">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-surface transition hover:text-accent"
+          className="flex items-center gap-2.5 font-[family-name:var(--font-montserrat)] font-bold tracking-tight text-surface transition hover:opacity-80"
         >
           <Image
             src="/logo-icon-white.png"

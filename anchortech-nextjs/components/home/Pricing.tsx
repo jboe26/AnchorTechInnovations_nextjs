@@ -13,7 +13,7 @@ export default function Pricing() {
       </p>
       <Link
         href="/pricing"
-        className="mt-6 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="mt-6 inline-block rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
       >
         See full pricing
       </Link>

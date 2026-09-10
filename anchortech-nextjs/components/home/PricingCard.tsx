@@ -31,7 +31,7 @@ export default function PricingCard({
       <ul className="mt-5 space-y-1.5 text-sm text-text/70">
         {features.map((feature) => (
           <li key={feature} className="flex gap-2">
-            <span className="text-accent">&#10003;</span>
+            <span className="text-accent-strong">&#10003;</span>
             <span>{feature}</span>
           </li>
         ))}

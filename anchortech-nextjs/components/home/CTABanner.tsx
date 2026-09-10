@@ -21,7 +21,7 @@ export default function CTABanner() {
         </p>
         <a
           href="mailto:joshboepple@anchortech.org"
-          className="mt-9 inline-block rounded-md bg-accent px-8 py-3.5 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="mt-9 inline-block rounded-md bg-accent px-8 py-3.5 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
         >
           Get in touch
         </a>

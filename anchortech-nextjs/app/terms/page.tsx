@@ -109,14 +109,14 @@ export default function Terms() {
               Questions about these Terms can be sent to{" "}
               <a
                 href="mailto:joshboepple@anchortech.org"
-                className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                className="font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong"
               >
                 joshboepple@anchortech.org
               </a>
               . See also our{" "}
               <Link
                 href="/privacy"
-                className="font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent"
+                className="font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong"
               >
                 Privacy Policy
               </Link>

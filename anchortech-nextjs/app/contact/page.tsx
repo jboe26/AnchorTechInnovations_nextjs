@@ -35,7 +35,7 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full rounded-md border border-muted/30 bg-white/[0.05] px-4 py-3 text-surface placeholder:text-muted outline-none transition focus:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
+    "w-full rounded-md border border-muted/30 bg-white/[0.05] px-4 py-3 text-surface placeholder:text-muted outline-none transition focus:border-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong";
 
   const labelClass =
     "mb-1.5 block font-mono text-xs tracking-wider text-muted";
@@ -68,7 +68,7 @@ export default function Contact() {
               </p>
               <a
                 href="mailto:joshboepple@anchortech.org"
-                className="mt-1 inline-block font-semibold text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="mt-1 inline-block font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 joshboepple@anchortech.org
               </a>
@@ -142,7 +142,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="w-full rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 Send message
               </button>

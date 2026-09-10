@@ -31,7 +31,7 @@ export default function Founder() {
               href="https://joshboeppleportfolio.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="text-accent-on-dark underline decoration-accent-on-dark/40 underline-offset-4 transition hover:decoration-accent-on-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
             >
               portfolio &rarr;
             </a>
@@ -39,7 +39,7 @@ export default function Founder() {
               href="https://github.com/jboe26"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="text-accent-on-dark underline decoration-accent-on-dark/40 underline-offset-4 transition hover:decoration-accent-on-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
             >
               github &rarr;
             </a>

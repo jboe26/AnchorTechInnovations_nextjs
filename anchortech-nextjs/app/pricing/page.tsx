@@ -52,7 +52,7 @@ export default function Pricing() {
               key={item}
               className="flex gap-2 rounded-lg border border-muted/30 bg-white px-4 py-3 text-sm text-text/70"
             >
-              <span className="text-accent">&#10003;</span>
+              <span className="text-accent-strong">&#10003;</span>
               <span>{item}</span>
             </li>
           ))}

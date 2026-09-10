@@ -9,9 +9,18 @@
   --primary: #245F94;      /* primary blue */
   --text: #0F1113;         /* body text, near-black */
   --surface: #F2F2F2;      /* page background, off-white */
-  --accent: #C57B45;       /* accent (copper) — use sparingly against primary/surface-dark */
+  --accent: #C57B45;       /* accent (copper) — icons, buttons (white text on it), decorative borders */
   --surface-dark: #1A2E40; /* dark surfaces (Alliance card, dark sections) */
   --muted: #5F6D79;        /* secondary text, borders, dividers — derived from surface-dark, tuned for AA on surface */
+
+  /* Copper as running text needs a different lightness than copper as a
+     surface/icon color, or it fails AA in one direction or the other.
+     --accent stays the confirmed brand hex for non-text uses; these two
+     are copper text/labels tuned for AA (4.5:1) against the background
+     they actually sit on. There is no copper variant that reads as AA
+     text on --primary — see Navbar, which uses --surface for that instead. */
+  --accent-strong: #945C34;  /* copper text/links/labels on --surface or white */
+  --accent-on-dark: #D48549; /* copper text/labels on --surface-dark */
 }
 
 @theme inline {
@@ -26,6 +35,8 @@
   --color-accent: var(--accent);
   --color-surface-dark: var(--surface-dark);
   --color-muted: var(--muted);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-on-dark: var(--accent-on-dark);
 }
 
 body {
