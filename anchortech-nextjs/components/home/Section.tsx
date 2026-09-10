@@ -19,20 +19,22 @@ export default function Section({ id, index, label, bg = "light", children }: Se
   return (
     <section
       id={id}
-      className={isDark ? "bg-anchor-ink text-anchor-paper" : "bg-anchor-paper text-anchor-ink"}
+      className={isDark ? "bg-surface-dark text-surface" : "bg-surface text-text"}
     >
       <div className="mx-auto max-w-6xl px-6 py-20 md:px-10 md:py-28">
         <div className="md:grid md:grid-cols-[2.5rem_1fr] md:gap-10">
           <div className="mb-8 flex items-center gap-4 md:mb-0 md:flex-col md:items-center md:justify-start md:gap-4">
             <span
-              className="whitespace-nowrap font-mono text-xs tracking-wider text-anchor-slate md:[writing-mode:vertical-rl] md:rotate-180"
+              className={`whitespace-nowrap font-mono text-xs tracking-wider md:[writing-mode:vertical-rl] md:rotate-180 ${
+                isDark ? "text-surface/60" : "text-muted"
+              }`}
             >
               {mark} {label}
             </span>
             <span
               aria-hidden="true"
               className={`h-px flex-1 md:h-full md:w-px md:flex-1 ${
-                isDark ? "bg-anchor-slate/30" : "bg-anchor-slate/40"
+                isDark ? "bg-muted/30" : "bg-muted/40"
               }`}
             />
           </div>
