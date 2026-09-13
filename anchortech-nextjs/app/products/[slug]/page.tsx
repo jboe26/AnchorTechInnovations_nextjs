@@ -17,12 +17,26 @@ export async function generateMetadata({
   const product = await getProductBySlug(slug);
 
   if (!product) {
-    return { title: "Product not found | AnchorTech Innovations" };
+    return { title: "Product not found" };
   }
 
+  const ogTitle = `${product.name} | AnchorTech Innovations`;
+  const url = `https://anchortech.org/products/${product.slug}`;
+
   return {
-    title: `${product.name} | AnchorTech Innovations`,
+    title: product.name,
     description: product.short_description,
+    openGraph: {
+      title: ogTitle,
+      description: product.short_description,
+      url,
+      images: [{ url: "/logo2.png", width: 512, height: 512, alt: "AnchorTech Innovations" }],
+    },
+    twitter: {
+      title: ogTitle,
+      description: product.short_description,
+      images: ["/logo2.png"],
+    },
   };
 }
 

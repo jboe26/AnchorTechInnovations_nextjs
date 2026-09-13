@@ -3,9 +3,22 @@ import ProductCard from "@/components/products/ProductCard";
 import { getActiveProducts } from "@/lib/products";
 
 export const metadata = {
-  title: "Digital Products | AnchorTech Innovations",
+  title: "Digital Products",
   description:
     "Templates and tools for freelancers, small businesses, and anyone getting organized.",
+  openGraph: {
+    title: "Digital Products | AnchorTech Innovations",
+    description:
+      "Templates and tools for freelancers, small businesses, and anyone getting organized.",
+    url: "https://anchortech.org/products",
+    images: [{ url: "/logo2.png", width: 512, height: 512, alt: "AnchorTech Innovations" }],
+  },
+  twitter: {
+    title: "Digital Products | AnchorTech Innovations",
+    description:
+      "Templates and tools for freelancers, small businesses, and anyone getting organized.",
+    images: ["/logo2.png"],
+  },
 };
 
 // Prices and product details are edited through /admin and should show up

@@ -51,11 +51,31 @@ const websiteSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "AnchorTech Innovations",
+  metadataBase: new URL("https://anchortech.org"),
+  title: {
+    default: "AnchorTech Innovations",
+    template: "%s | AnchorTech Innovations",
+  },
   description:
     "Affordable web development and tech support for small businesses and organizations in the Charlotte area.",
   verification: {
     google: "AxqYMeMe0yO5CUlVnu1RWmmqdPzxBrdv95Jm5dUMWmQ",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "AnchorTech Innovations",
+    title: "AnchorTech Innovations",
+    description:
+      "Affordable web development and tech support for small businesses and organizations in the Charlotte area.",
+    url: "https://anchortech.org",
+    images: [{ url: "/logo2.png", width: 512, height: 512, alt: "AnchorTech Innovations" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "AnchorTech Innovations",
+    description:
+      "Affordable web development and tech support for small businesses and organizations in the Charlotte area.",
+    images: ["/logo2.png"],
   },
 };
 
