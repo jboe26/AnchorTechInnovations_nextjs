@@ -178,6 +178,20 @@ export default function ProductForm({ product }: { product?: Product }) {
         {storagePath && (
           <p className="mb-2 font-mono text-xs text-text/60">
             Currently: {storagePath} ({fileLabel})
+            {isEditing && (
+              <>
+                {" "}
+                &middot;{" "}
+                <a
+                  href={`/api/admin/products/${product!.id}/file`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-strong underline decoration-accent-strong/40 underline-offset-4"
+                >
+                  view file
+                </a>
+              </>
+            )}
           </p>
         )}
         <div className="flex flex-wrap items-center gap-3">
