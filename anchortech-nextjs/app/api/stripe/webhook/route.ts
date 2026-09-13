@@ -3,6 +3,7 @@ import crypto from "node:crypto";
 import type Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
 import { supabaseAdmin } from "@/lib/supabase/admin";
+import { sendDeliveryEmail } from "@/lib/email";
 
 export async function POST(request: NextRequest) {
   // Must read the raw body -- constructEvent needs the exact bytes Stripe
@@ -27,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     const { data: purchase, error: lookupError } = await supabaseAdmin
       .from("storefront_purchases")
-      .select("*")
+      .select("*, storefront_products(name, version)")
       .eq("stripe_session_id", session.id)
       .maybeSingle();
 
@@ -61,10 +62,27 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: updateError.message }, { status: 500 });
     }
 
-    // Delivery email is sent here in a later step, once lib/email.ts exists.
-    // Only send it when `updated` is non-null (this event actually made the
-    // pending -> paid transition), so a retried event never sends a
-    // duplicate email.
+    // Only send the email when `updated` is non-null (this event actually
+    // made the pending -> paid transition), so a retried event never sends
+    // a duplicate. A failure here doesn't fail the webhook -- the purchase
+    // is already correctly marked paid regardless of email delivery.
+    const product = purchase.storefront_products as
+      | { name: string; version: string }
+      | null;
+    const email = session.customer_details?.email ?? purchase.email;
+
+    if (updated && product && email) {
+      try {
+        await sendDeliveryEmail({
+          to: email,
+          productName: product.name,
+          version: product.version,
+          downloadUrl: `${process.env.NEXT_PUBLIC_SITE_URL}/api/download/${downloadToken}`,
+        });
+      } catch (err) {
+        console.error("Failed to send delivery email:", err);
+      }
+    }
   }
 
   return NextResponse.json({ received: true });
