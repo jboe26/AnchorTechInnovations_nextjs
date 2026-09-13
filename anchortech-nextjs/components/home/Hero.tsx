@@ -34,9 +34,9 @@ export default function Hero() {
               variants={heroItem}
               className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
-              No account managers. No templates stretched to fit. Just direct
-              access to the person writing the code, from first call to
-              launch.
+              No account managers. No agency playbook stretched to fit. Just
+              direct access to the person writing the code, from first call
+              to launch.
             </motion.p>
 
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
@@ -98,7 +98,7 @@ export default function Hero() {
                   {"// no account managers"}
                 </p>
                 <p className="text-surface/60">
-                  {"// no templates stretched to fit"}
+                  {"// no playbook stretched to fit"}
                 </p>
               </div>
             </div>
