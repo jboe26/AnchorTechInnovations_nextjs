@@ -5,7 +5,7 @@ import { getActiveProducts } from "@/lib/products";
 export const metadata = {
   title: "Digital Products | AnchorTech Innovations",
   description:
-    "Downloadable reference tools built for freelance web developers and SEO contractors.",
+    "Templates and tools for freelancers, small businesses, and anyone getting organized.",
 };
 
 // Prices and product details are edited through /admin and should show up
@@ -23,12 +23,12 @@ export default async function ProductsPage() {
             AnchorTech Innovations // products
           </p>
           <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-            Reference tools, not another course.
+            Templates and tools, not another course.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-text/70">
-            I build these for the same reason I build client sites: to save
-            time on the parts of the job that shouldn&apos;t take as long as
-            they do. Buy once, download instantly, use on every project.
+            I build these because I keep solving the same problems for myself
+            and for clients. Buy once, download instantly, use as many times
+            as you need.
           </p>
         </div>
       </section>
