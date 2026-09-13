@@ -14,16 +14,16 @@ export const productContent: Record<string, ProductContent> = {
   "schema-markup-reference-library": {
     slug: "schema-markup-reference-library",
     tagline:
-      "Copy-paste JSON-LD for the schema types that actually come up in client work.",
+      "An interactive tool that builds your schema markup, backed by real templates for when you'd rather edit by hand.",
     includes: [
+      "An offline, interactive schema builder tool: fill in the business details once, tick every schema type a page needs, and it generates one linked JSON-LD block ready to paste in",
       "20 ready-to-edit JSON-LD templates (Article, Product, LocalBusiness, FAQPage, HowTo, Review, Organization, BreadcrumbList, Event, JobPosting, and more)",
-      "A validation checklist for catching the mistakes Google's Rich Results Test won't warn you about",
+      "A validation checklist for catching the mistakes that pass a quick glance but fail in practice",
       "A one-page cheat sheet mapping page type to schema type",
-      "Real, filled-in examples for each template, not just empty placeholders",
     ],
     whoItsFor: [
       "Freelance web developers who need structured data done correctly without re-reading schema.org docs on every project",
-      "SEO contractors adding schema to client sites who want a reference instead of a rebuild",
+      "SEO contractors adding schema to client sites who want a tool instead of a rebuild",
       "Anyone who bills by the project and wants schema markup to stop eating an afternoon",
     ],
     refundPolicy:
