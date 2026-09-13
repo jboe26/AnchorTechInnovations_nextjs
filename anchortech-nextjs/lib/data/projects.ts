@@ -28,6 +28,7 @@ export const projects: Project[] = [
     name: "Branches",
     description:
       "A prayer app for small groups, so requests get followed up instead of lost in a group chat.",
-    status: "coming soon to the App Store",
+    href: "https://apps.apple.com/ie/app/branches-prayer-app/id6799579618",
   },
 ];
+

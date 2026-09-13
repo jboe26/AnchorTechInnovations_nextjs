@@ -11,6 +11,11 @@
   --anchor-deep: #245F94;
   --anchor-accent: #388CD8;
   --anchor-slate: #788C9F;
+
+  /* Digital products storefront tokens */
+  --anchor-copper: #C57B45;
+  --anchor-black: #0F1113;
+  --anchor-navy: #1A2E40;
 }
 
 @theme inline {
@@ -25,6 +30,9 @@
   --color-anchor-deep: var(--anchor-deep);
   --color-anchor-accent: var(--anchor-accent);
   --color-anchor-slate: var(--anchor-slate);
+  --color-anchor-copper: var(--anchor-copper);
+  --color-anchor-black: var(--anchor-black);
+  --color-anchor-navy: var(--anchor-navy);
 }
 
 body {

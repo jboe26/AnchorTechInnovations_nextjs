@@ -11,7 +11,7 @@ export default function Contact() {
   const encode = (data: Record<string, string>) =>
     Object.keys(data)
       .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
       )
       .join("&");
 
@@ -51,9 +51,9 @@ export default function Contact() {
             Start the conversation.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-anchor-ink/70">
-            Every project starts with a simple conversation. Share a bit
-            about what you need, and I&apos;ll walk you through how
-            AnchorTech can help without the overwhelm.
+            Every project starts with a simple conversation. Share a bit about
+            what you need, and I&apos;ll walk you through how AnchorTech can
+            help without the overwhelm.
           </p>
         </div>
       </section>
