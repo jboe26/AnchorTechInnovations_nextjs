@@ -11,7 +11,7 @@ export default function Contact() {
   const encode = (data: Record<string, string>) =>
     Object.keys(data)
       .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       )
       .join("&");
 
@@ -35,25 +35,25 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full rounded-md border border-anchor-slate/30 bg-white/[0.05] px-4 py-3 text-anchor-paper placeholder:text-anchor-slate outline-none transition focus:border-anchor-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent";
+    "w-full rounded-md border border-muted/30 bg-white/[0.05] px-4 py-3 text-surface placeholder:text-muted outline-none transition focus:border-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong";
 
   const labelClass =
-    "mb-1.5 block font-mono text-xs tracking-wider text-anchor-slate";
+    "mb-1.5 block font-mono text-xs tracking-wider text-muted";
 
   return (
     <main>
-      <section className="bg-anchor-paper text-anchor-ink">
+      <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
-          <p className="font-mono text-sm tracking-wide text-anchor-ink/70">
+          <p className="font-mono text-sm tracking-wide text-text/70">
             AnchorTech Innovations // contact
           </p>
           <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             Start the conversation.
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-anchor-ink/70">
-            Every project starts with a simple conversation. Share a bit about
-            what you need, and I&apos;ll walk you through how AnchorTech can
-            help without the overwhelm.
+          <p className="mt-6 text-lg leading-relaxed text-text/70">
+            Every project starts with a simple conversation. Share a bit
+            about what you need, and I&apos;ll walk you through how
+            AnchorTech can help without the overwhelm.
           </p>
         </div>
       </section>
@@ -61,31 +61,31 @@ export default function Contact() {
       <Section id="get-in-touch" index={1} label="get in touch" bg="dark">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
           {/* Contact Info */}
-          <div className="space-y-6 rounded-lg border border-anchor-slate/30 bg-white/[0.05] p-6 h-fit">
+          <div className="space-y-6 rounded-lg border border-muted/30 bg-white/[0.05] p-6 h-fit">
             <div>
-              <p className="font-mono text-xs tracking-wider text-anchor-slate">
+              <p className="font-mono text-xs tracking-wider text-muted">
                 email
               </p>
               <a
                 href="mailto:joshboepple@anchortech.org"
-                className="mt-1 inline-block font-semibold text-anchor-accent underline decoration-anchor-accent/40 underline-offset-4 transition hover:decoration-anchor-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent"
+                className="mt-1 inline-block font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 joshboepple@anchortech.org
               </a>
             </div>
             <div>
-              <p className="font-mono text-xs tracking-wider text-anchor-slate">
+              <p className="font-mono text-xs tracking-wider text-muted">
                 location
               </p>
-              <p className="mt-1 text-anchor-paper/80">
+              <p className="mt-1 text-surface/80">
                 Pineville, NC, serving the greater Charlotte area
               </p>
             </div>
             <div>
-              <p className="font-mono text-xs tracking-wider text-anchor-slate">
+              <p className="font-mono text-xs tracking-wider text-muted">
                 availability
               </p>
-              <p className="mt-1 text-anchor-paper/80">
+              <p className="mt-1 text-surface/80">
                 Open to freelance projects, consulting, and ongoing
                 partnerships.
               </p>
@@ -93,8 +93,8 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="rounded-lg border border-anchor-slate/30 bg-white/[0.05] p-6 sm:p-8">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-anchor-paper">
+          <div className="rounded-lg border border-muted/30 bg-white/[0.05] p-6 sm:p-8">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-surface">
               Send a message
             </h2>
             <form
@@ -142,12 +142,12 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-md bg-anchor-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent"
+                className="w-full rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 Send message
               </button>
               {status && (
-                <p className="mt-2 text-center text-sm text-anchor-paper/80">
+                <p className="mt-2 text-center text-sm text-surface/80">
                   {status}
                 </p>
               )}

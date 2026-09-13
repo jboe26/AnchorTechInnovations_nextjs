@@ -7,7 +7,7 @@ import { heroContainer, heroItem } from "@/lib/motion";
 
 export default function Hero() {
   return (
-    <section className="bg-anchor-paper text-anchor-ink">
+    <section className="bg-surface text-text">
       <div className="mx-auto max-w-6xl px-6 pt-28 pb-20 md:px-10 md:pt-36 md:pb-28">
         <motion.div
           className="grid gap-14 md:grid-cols-2 md:items-center md:gap-10"
@@ -18,7 +18,7 @@ export default function Hero() {
           <div>
             <motion.p
               variants={heroItem}
-              className="font-mono text-sm tracking-wide text-anchor-ink/70"
+              className="font-mono text-sm tracking-wide text-text/70"
             >
               AnchorTech Innovations // Pineville, NC
             </motion.p>
@@ -32,7 +32,7 @@ export default function Hero() {
 
             <motion.p
               variants={heroItem}
-              className="mt-6 max-w-lg text-lg leading-relaxed text-anchor-ink/70"
+              className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
               No account managers. No templates stretched to fit. Just direct
               access to the person writing the code, from first call to
@@ -42,13 +42,13 @@ export default function Hero() {
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
               <Link
                 href="/pricing"
-                className="rounded-md bg-anchor-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-accent"
+                className="rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 View pricing
               </Link>
               <a
                 href="#projects"
-                className="rounded-md border-2 border-anchor-deep px-6 py-3 font-semibold text-anchor-deep transition hover:bg-anchor-deep hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-anchor-deep"
+                className="rounded-md border-2 border-primary px-6 py-3 font-semibold text-primary transition hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 See the work
               </a>
@@ -56,11 +56,11 @@ export default function Hero() {
           </div>
 
           <motion.div variants={heroItem}>
-            <div className="overflow-hidden rounded-xl border border-anchor-slate/30 bg-anchor-ink shadow-xl">
-              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
-                <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-anchor-slate/50" />
+            <div className="overflow-hidden rounded-xl border border-muted/30 bg-surface-dark shadow-xl">
+              <div className="flex items-center gap-2 border-b border-white/10 bg-primary px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-muted/50" />
                 <Image
                   src="/logo-icon-white.png"
                   alt=""
@@ -69,35 +69,35 @@ export default function Hero() {
                   className="ml-auto h-4 w-4 opacity-70"
                 />
               </div>
-              <div className="space-y-1.5 px-6 py-8 font-mono text-sm leading-relaxed text-anchor-paper/90">
-                <p className="text-anchor-slate">{"// AnchorTech Innovations"}</p>
-                <p className="text-anchor-slate">{"// built by one developer"}</p>
+              <div className="space-y-1.5 px-6 py-8 font-mono text-sm leading-relaxed text-surface/90">
+                <p className="text-surface/60">{"// AnchorTech Innovations"}</p>
+                <p className="text-surface/60">{"// built by one developer"}</p>
                 <p className="pt-4">
-                  <span className="text-anchor-accent">const</span> project ={" "}
+                  <span className="text-accent-on-dark">const</span> project ={" "}
                   {"{"}
                 </p>
                 <p className="pl-4">
-                  client: <span className="text-anchor-accent">&quot;you&quot;</span>,
+                  client: <span className="text-accent-on-dark">&quot;you&quot;</span>,
                 </p>
                 <p className="pl-4">
                   scope:{" "}
-                  <span className="text-anchor-accent">
+                  <span className="text-accent-on-dark">
                     &quot;exactly what you need&quot;
                   </span>
                   ,
                 </p>
                 <p className="pl-4">
                   handoff:{" "}
-                  <span className="text-anchor-accent">
+                  <span className="text-accent-on-dark">
                     &quot;direct, no middleman&quot;
                   </span>
                   ,
                 </p>
                 <p>{"};"}</p>
-                <p className="pt-4 text-anchor-slate">
+                <p className="pt-4 text-surface/60">
                   {"// no account managers"}
                 </p>
-                <p className="text-anchor-slate">
+                <p className="text-surface/60">
                   {"// no templates stretched to fit"}
                 </p>
               </div>

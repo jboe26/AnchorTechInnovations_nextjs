@@ -18,15 +18,15 @@ const aLaCarte = [
 export default function Pricing() {
   return (
     <main>
-      <section className="bg-anchor-paper text-anchor-ink">
+      <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
-          <p className="font-mono text-sm tracking-wide text-anchor-ink/70">
+          <p className="font-mono text-sm tracking-wide text-text/70">
             AnchorTech Innovations // pricing
           </p>
           <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             Clear pricing. No gimmicks.
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-anchor-ink/70">
+          <p className="mt-6 text-lg leading-relaxed text-text/70">
             Pick a package for a one-time build, or a partnership for
             ongoing support. Every project starts with a clear quote before
             any work begins.
@@ -39,10 +39,10 @@ export default function Pricing() {
       </Section>
 
       <Section id="a-la-carte" index={2} label="a la carte" bg="light">
-        <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-anchor-ink sm:text-4xl">
+        <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
           Custom &agrave; la carte tech help
         </h2>
-        <p className="mt-4 max-w-lg text-anchor-ink/70">
+        <p className="mt-4 max-w-lg text-text/70">
           For the moments when you just need one thing done, simple,
           direct, and without committing to a full package.
         </p>
@@ -50,14 +50,14 @@ export default function Pricing() {
           {aLaCarte.map((item) => (
             <li
               key={item}
-              className="flex gap-2 rounded-lg border border-anchor-slate/30 bg-white px-4 py-3 text-sm text-anchor-ink/70"
+              className="flex gap-2 rounded-lg border border-muted/30 bg-white px-4 py-3 text-sm text-text/70"
             >
-              <span className="text-anchor-accent">&#10003;</span>
+              <span className="text-accent-strong">&#10003;</span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
-        <p className="mt-6 font-mono text-sm text-anchor-deep">
+        <p className="mt-6 font-mono text-sm text-primary">
           Most &agrave; la carte services start at $50. You&apos;ll always
           get a clear quote before any work begins.
         </p>

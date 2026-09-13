@@ -27,7 +27,7 @@ const services = [
 export default function Services() {
   return (
     <Section id="services" index={2} label="what I build" bg="dark">
-      <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-anchor-paper sm:text-4xl">
+      <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-surface sm:text-4xl">
         What I build
       </h2>
       <div className="mt-10 grid gap-5 sm:grid-cols-2">
