@@ -30,12 +30,10 @@ export async function generateMetadata({
       title: ogTitle,
       description: product.short_description,
       url,
-      images: [{ url: "/logo2.png", width: 512, height: 512, alt: "AnchorTech Innovations" }],
     },
     twitter: {
       title: ogTitle,
       description: product.short_description,
-      images: ["/logo2.png"],
     },
   };
 }

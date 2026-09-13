@@ -11,13 +11,11 @@ export const metadata = {
     description:
       "Templates and tools for freelancers, small businesses, and anyone getting organized.",
     url: "https://anchortech.org/products",
-    images: [{ url: "/logo2.png", width: 512, height: 512, alt: "AnchorTech Innovations" }],
   },
   twitter: {
     title: "Digital Products | AnchorTech Innovations",
     description:
       "Templates and tools for freelancers, small businesses, and anyone getting organized.",
-    images: ["/logo2.png"],
   },
 };
 
