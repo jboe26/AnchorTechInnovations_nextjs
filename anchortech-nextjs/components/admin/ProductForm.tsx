@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import type { Product } from "@/lib/products";
 
 const inputClass =
-  "w-full rounded-md border border-anchor-slate/30 px-4 py-3 text-anchor-ink outline-none transition focus:border-anchor-deep";
-const labelClass = "mb-1.5 block font-mono text-xs tracking-wider text-anchor-slate";
+  "w-full rounded-md border border-muted/30 px-4 py-3 text-text outline-none transition focus:border-primary";
+const labelClass = "mb-1.5 block font-mono text-xs tracking-wider text-muted";
 
 export default function ProductForm({ product }: { product?: Product }) {
   const router = useRouter();
@@ -176,7 +176,7 @@ export default function ProductForm({ product }: { product?: Product }) {
       <div>
         <label className={labelClass}>product file</label>
         {storagePath && (
-          <p className="mb-2 font-mono text-xs text-anchor-ink/60">
+          <p className="mb-2 font-mono text-xs text-text/60">
             Currently: {storagePath} ({fileLabel})
           </p>
         )}
@@ -190,14 +190,14 @@ export default function ProductForm({ product }: { product?: Product }) {
             type="button"
             onClick={handleUpload}
             disabled={!file || uploading}
-            className="rounded-md border border-anchor-deep px-4 py-2 text-sm font-semibold text-anchor-deep transition hover:bg-anchor-deep/5 disabled:opacity-50"
+            className="rounded-md border border-primary px-4 py-2 text-sm font-semibold text-primary transition hover:bg-primary/5 disabled:opacity-50"
           >
             {uploading ? "Uploading..." : "Upload to bucket"}
           </button>
         </div>
       </div>
 
-      <label className="flex items-center gap-2 text-sm text-anchor-ink">
+      <label className="flex items-center gap-2 text-sm text-text">
         <input
           type="checkbox"
           checked={active}
@@ -211,7 +211,7 @@ export default function ProductForm({ product }: { product?: Product }) {
       <button
         type="submit"
         disabled={submitting}
-        className="rounded-md bg-anchor-deep px-6 py-3 font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
+        className="rounded-md bg-primary px-6 py-3 font-semibold text-white transition hover:opacity-90 disabled:opacity-60"
       >
         {submitting ? "Saving..." : isEditing ? "Save changes" : "Create product"}
       </button>
