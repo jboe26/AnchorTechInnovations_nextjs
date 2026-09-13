@@ -2,5 +2,11 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  # NEXT_PUBLIC_SITE_URL is meant to be public -- Next.js embeds it in the
+  # client bundle by design (that's what the NEXT_PUBLIC_ prefix means).
+  # Netlify's secret scanner doesn't know that and flags it as a leak.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
