@@ -4,6 +4,10 @@ import { getProductBySlug, formatPrice } from "@/lib/products";
 import { productContent } from "@/lib/data/product-content";
 import BuyButton from "@/components/products/BuyButton";
 
+// Prices and product details are edited through /admin and should show up
+// immediately, not just after the next deploy.
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {

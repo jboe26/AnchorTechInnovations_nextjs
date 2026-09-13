@@ -8,6 +8,10 @@ export const metadata = {
     "Downloadable reference tools built for freelance web developers and SEO contractors.",
 };
 
+// Prices and product details are edited through /admin and should show up
+// immediately, not just after the next deploy.
+export const dynamic = "force-dynamic";
+
 export default async function ProductsPage() {
   const products = await getActiveProducts();
 
