@@ -29,7 +29,7 @@ export default async function EditProductPage({
       <h1 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-text">
         Edit product
       </h1>
-      <div className="mt-8">
+      <div className="mt-8 rounded-lg border border-muted/30 bg-white p-6 sm:p-8">
         <ProductForm product={product} />
       </div>
     </main>

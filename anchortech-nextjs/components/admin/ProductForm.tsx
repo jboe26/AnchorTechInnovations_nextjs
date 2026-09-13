@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import type { Product } from "@/lib/products";
 
 const inputClass =
-  "w-full rounded-md border border-muted/30 px-4 py-3 text-text outline-none transition focus:border-primary";
+  "w-full rounded-md border border-muted/40 bg-white px-4 py-3 text-text outline-none transition focus:border-primary";
 const labelClass = "mb-1.5 block font-mono text-xs tracking-wider text-muted";
 
 export default function ProductForm({ product }: { product?: Product }) {
