@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Section from "@/components/home/Section";
 import { getProductBySlug, formatPrice } from "@/lib/products";
 import { productContent } from "@/lib/data/product-content";
+import BuyButton from "@/components/products/BuyButton";
 
 export async function generateMetadata({
   params,
@@ -72,13 +73,7 @@ export default async function ProductDetailPage({
               </p>
             </div>
 
-            <button
-              type="button"
-              disabled
-              className="mt-6 w-full rounded-md bg-accent px-6 py-3.5 font-semibold text-white opacity-60 transition"
-            >
-              Buy now (checkout coming soon)
-            </button>
+            <BuyButton slug={product.slug} />
 
             {content && (
               <p className="mt-4 text-sm leading-relaxed text-surface/70">
