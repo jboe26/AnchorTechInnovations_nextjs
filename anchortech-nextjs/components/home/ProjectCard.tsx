@@ -22,26 +22,49 @@ export default function ProjectCard({
       <p className="mt-3 text-sm leading-relaxed text-text/70">
         {description}
       </p>
-      {caseStudyHref || href ? (
-        <span className="mt-4 inline-block font-mono text-xs tracking-wide text-accent-strong">
-          {caseStudyHref ? "view case study" : "view project"} &rarr;
-        </span>
-      ) : (
-        status && (
-          <span className="mt-4 inline-block font-mono text-xs tracking-wide text-text/70">
-            {status}
+      {!caseStudyHref &&
+        (href ? (
+          <span className="mt-4 inline-block font-mono text-xs tracking-wide text-accent-strong">
+            view project &rarr;
           </span>
-        )
-      )}
+        ) : (
+          status && (
+            <span className="mt-4 inline-block font-mono text-xs tracking-wide text-text/70">
+              {status}
+            </span>
+          )
+        ))}
     </>
   );
 
   if (caseStudyHref) {
     return (
-      <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2, ease: "easeOut" }}>
-        <Link href={caseStudyHref} className={cardClass}>
+      <motion.div
+        whileHover={{ y: -4 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        className={cardClass}
+      >
+        <Link href={caseStudyHref} className="block focus-visible:outline-none">
           {content}
         </Link>
+        <span className="mt-4 flex items-center gap-4">
+          <Link
+            href={caseStudyHref}
+            className="font-mono text-xs tracking-wide text-accent-strong hover:underline"
+          >
+            view case study &rarr;
+          </Link>
+          {href && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs tracking-wide text-text/70 hover:underline"
+            >
+              visit live site &rarr;
+            </a>
+          )}
+        </span>
       </motion.div>
     );
   }
