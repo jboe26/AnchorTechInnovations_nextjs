@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import Section from "@/components/home/Section";
 import CTABanner from "@/components/home/CTABanner";
@@ -92,8 +93,14 @@ export default function SpeechInnovationNCCaseStudy() {
               <span className="h-2.5 w-2.5 rounded-full bg-muted/30" />
               <span className="h-2.5 w-2.5 rounded-full bg-muted/30" />
             </div>
-            <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-primary to-accent-strong text-sm font-medium text-white/85">
-              Site screenshot coming soon
+            <div className="relative aspect-video">
+              <Image
+                src="/case-studies/speech-innovation-nc.png"
+                alt="Speech Innovation NC website"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
           </div>
         </div>
