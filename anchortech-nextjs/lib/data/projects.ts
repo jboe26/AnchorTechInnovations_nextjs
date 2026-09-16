@@ -2,6 +2,7 @@ export type Project = {
   name: string;
   description: string;
   href?: string;
+  caseStudyHref?: string;
   status?: string;
 };
 
@@ -11,6 +12,7 @@ export const projects: Project[] = [
     description:
       "Full site and brand package for a bilingual speech therapy practice, from logo to launch.",
     href: "https://speechinnovationnc.org/",
+    caseStudyHref: "/case-studies/speech-innovation-nc",
   },
   {
     name: "Mickey Herring Taxidermy",
