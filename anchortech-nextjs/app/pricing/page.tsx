@@ -1,6 +1,7 @@
 import Section from "@/components/home/Section";
 import PricingContent from "@/components/home/PricingContent";
 import CTABanner from "@/components/home/CTABanner";
+import PricingInquiryForm from "@/components/home/PricingInquiryForm";
 
 export const metadata = {
   title: "Pricing",
@@ -80,6 +81,14 @@ export default function Pricing() {
           Most &agrave; la carte services start at $50. You&apos;ll always
           get a clear quote before any work begins.
         </p>
+        <div className="mt-6 max-w-xs">
+          <PricingInquiryForm
+            planName="À la carte tech help"
+            priceLabel="starts at $50"
+            buttonLabel="Get a quote"
+            buttonClassName="inline-block w-full rounded-md bg-accent px-6 py-3 text-center font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
+          />
+        </div>
       </Section>
 
       <CTABanner />

@@ -7,6 +7,7 @@ type Props = {
   priceLabel: string;
   isDark?: boolean;
   buttonClassName: string;
+  buttonLabel?: string;
 };
 
 export default function PricingInquiryForm({
@@ -14,6 +15,7 @@ export default function PricingInquiryForm({
   priceLabel,
   isDark = false,
   buttonClassName,
+  buttonLabel,
 }: Props) {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -47,7 +49,7 @@ export default function PricingInquiryForm({
   if (!open) {
     return (
       <button type="button" onClick={() => setOpen(true)} className={buttonClassName}>
-        Start with {planName}
+        {buttonLabel ?? `Start with ${planName}`}
       </button>
     );
   }
