@@ -18,9 +18,12 @@ export default function PricingInquiryForm({
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const nameId = useId();
   const emailId = useId();
+  const websiteId = useId();
 
   const inputClass = isDark
     ? "w-full rounded-md border border-white/20 bg-white/[0.05] px-3 py-2 text-sm text-surface placeholder:text-surface/50 outline-none transition focus:border-accent-on-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
@@ -57,17 +60,38 @@ export default function PricingInquiryForm({
       const res = await fetch("/api/pricing-inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, planName, priceLabel }),
+        body: JSON.stringify({ name, email, planName, priceLabel, website }),
       });
-      if (!res.ok) throw new Error("Request failed");
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        setErrorMessage(
+          body?.error ?? "Something went wrong. Try again, or email joshboepple@anchortech.org directly."
+        );
+        setStatus("error");
+        return;
+      }
       setStatus("sent");
     } catch {
+      setErrorMessage("Something went wrong. Try again, or email joshboepple@anchortech.org directly.");
       setStatus("error");
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="mt-6 space-y-3">
+      {/* Honeypot: hidden from real visitors, only a bot fills this in. */}
+      <div className="absolute left-[-9999px]" aria-hidden="true">
+        <label htmlFor={websiteId}>Leave this field blank</label>
+        <input
+          id={websiteId}
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+      </div>
       <div>
         <label htmlFor={nameId} className={labelClass}>
           your name
@@ -99,7 +123,7 @@ export default function PricingInquiryForm({
       </button>
       {status === "error" && (
         <p role="status" className={`text-xs ${isDark ? "text-surface/70" : "text-text/70"}`}>
-          Something went wrong. Try again, or email joshboepple@anchortech.org directly.
+          {errorMessage}
         </p>
       )}
     </form>
