@@ -80,19 +80,34 @@ export default function SupportPlanCard({
       </div>
 
       <ul
-        className={`mt-5 space-y-1.5 text-sm ${
+        className={`mt-5 flex-1 space-y-1.5 text-sm ${
           isDark ? "text-surface/80" : "text-text/70"
         }`}
       >
         {features.map((feature) => (
           <li key={feature} className="flex gap-2">
-            <span className={isDark ? "text-accent-on-dark" : "text-accent-strong"}>
+            <span
+              className={isDark ? "text-accent-on-dark" : "text-accent-strong"}
+              aria-hidden="true"
+            >
               &#10003;
             </span>
             <span>{feature}</span>
           </li>
         ))}
       </ul>
+      <a
+        href={`mailto:joshboepple@anchortech.org?subject=${encodeURIComponent(
+          `Starting a partnership: ${name}`
+        )}`}
+        className={
+          isDark
+            ? "mt-6 inline-block w-full rounded-md bg-accent px-4 py-2.5 text-center font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
+            : "mt-6 inline-block w-full rounded-md border-2 border-primary px-4 py-2.5 text-center font-semibold text-primary transition hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        }
+      >
+        Start with {name}
+      </a>
     </motion.div>
   );
 }

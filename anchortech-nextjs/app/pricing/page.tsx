@@ -2,6 +2,23 @@ import Section from "@/components/home/Section";
 import PricingContent from "@/components/home/PricingContent";
 import CTABanner from "@/components/home/CTABanner";
 
+export const metadata = {
+  title: "Pricing",
+  description:
+    "Clear pricing, no gimmicks. One-time website packages starting at $650, ongoing care plans, and a la carte tech help starting at $50.",
+  openGraph: {
+    title: "Pricing | AnchorTech Innovations",
+    description:
+      "Clear pricing, no gimmicks. One-time website packages starting at $650, ongoing care plans, and a la carte tech help starting at $50.",
+    url: "https://anchortech.org/pricing",
+  },
+  twitter: {
+    title: "Pricing | AnchorTech Innovations",
+    description:
+      "Clear pricing, no gimmicks. One-time website packages starting at $650, ongoing care plans, and a la carte tech help starting at $50.",
+  },
+};
+
 const aLaCarte = [
   "Device setup (phones, tablets, laptops)",
   "Email or account troubleshooting",
@@ -52,7 +69,9 @@ export default function Pricing() {
               key={item}
               className="flex gap-2 rounded-lg border border-muted/30 bg-white px-4 py-3 text-sm text-text/70"
             >
-              <span className="text-accent-strong">&#10003;</span>
+              <span className="text-accent-strong" aria-hidden="true">
+                &#10003;
+              </span>
               <span>{item}</span>
             </li>
           ))}

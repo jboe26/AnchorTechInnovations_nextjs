@@ -1,6 +1,23 @@
 import Section from "@/components/home/Section";
 import CTABanner from "@/components/home/CTABanner";
 
+export const metadata = {
+  title: "About",
+  description:
+    "AnchorTech Innovations exists to help individuals, businesses, and organizations simplify their tech, strengthen their identity, and move forward with confidence.",
+  openGraph: {
+    title: "About | AnchorTech Innovations",
+    description:
+      "AnchorTech Innovations exists to help individuals, businesses, and organizations simplify their tech, strengthen their identity, and move forward with confidence.",
+    url: "https://anchortech.org/about",
+  },
+  twitter: {
+    title: "About | AnchorTech Innovations",
+    description:
+      "AnchorTech Innovations exists to help individuals, businesses, and organizations simplify their tech, strengthen their identity, and move forward with confidence.",
+  },
+};
+
 export default function About() {
   return (
     <main>

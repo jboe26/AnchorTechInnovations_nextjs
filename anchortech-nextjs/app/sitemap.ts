@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/contact",
     "/privacy",
     "/terms",
+    "/case-studies/speech-innovation-nc",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),

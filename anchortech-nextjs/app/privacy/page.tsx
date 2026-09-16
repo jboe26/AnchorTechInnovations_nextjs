@@ -1,5 +1,11 @@
 import Section from "@/components/home/Section";
 
+export const metadata = {
+  title: "Privacy Policy",
+  description:
+    "How AnchorTech Innovations collects, uses, and protects information across anchortech.org and the AnchorTech Connect app.",
+};
+
 export default function Privacy() {
   return (
     <main>
@@ -12,7 +18,7 @@ export default function Privacy() {
             Privacy Policy
           </h1>
           <p className="mt-4 font-mono text-sm text-muted">
-            Last updated: August 13, 2026
+            Last updated: September 16, 2026
           </p>
         </div>
       </section>
@@ -23,16 +29,80 @@ export default function Privacy() {
             <p>
               This Privacy Policy explains how AnchorTech Innovations
               (&ldquo;AnchorTech,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;)
-              collects, uses, and protects information when you use AnchorTech
-              Connect (the &ldquo;App&rdquo;) or our related websites and
-              services (collectively, the &ldquo;Services&rdquo;).
+              collects, uses, and protects information when you use
+              anchortech.org, AnchorTech Connect (the &ldquo;App&rdquo;), or
+              our related services (collectively, the &ldquo;Services&rdquo;).
+              It is split into two parts below: one for this website, and one
+              for the App.
             </p>
           </section>
 
           <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
-              Information We Collect
+            <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-primary mb-4">
+              Part 1: anchortech.org (this website)
             </h2>
+
+            <h3 className="font-[family-name:var(--font-montserrat)] text-lg font-bold text-text mb-2">
+              Information We Collect
+            </h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>
+                <span className="font-semibold">Contact form:</span> your
+                name, email address, and message, submitted when you use the{" "}
+                <a
+                  href="/contact"
+                  className="font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong"
+                >
+                  contact form
+                </a>
+                . This is handled by Netlify Forms and used only to respond
+                to you.
+              </li>
+              <li>
+                <span className="font-semibold">Purchases:</span> if you buy
+                a digital product, payment is processed directly by Stripe.
+                We never see or store your full card number. We do store the
+                purchase record itself (product, price, order status, and
+                the email address Stripe provides us for delivery) so we can
+                deliver your download and provide support if something goes
+                wrong.
+              </li>
+            </ul>
+            <p className="mt-3">
+              We do not use analytics or advertising cookies, and we do not
+              track you across other websites. The site does not require an
+              account, and browsing it does not collect any personal
+              information.
+            </p>
+
+            <h3 className="mt-6 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text mb-2">
+              How We Use It
+            </h3>
+            <ul className="list-disc list-inside space-y-2">
+              <li>To respond to messages sent through the contact form</li>
+              <li>To process and deliver digital product purchases</li>
+              <li>To provide support related to a purchase or inquiry</li>
+            </ul>
+
+            <h3 className="mt-6 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text mb-2">
+              How It Is Stored
+            </h3>
+            <p>
+              Purchase records are stored using Supabase, a third-party
+              database provider, on infrastructure they manage on our
+              behalf. Contact form submissions are handled by Netlify. We do
+              not sell your personal information to third parties.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-primary mb-4">
+              Part 2: AnchorTech Connect (the App)
+            </h2>
+
+            <h3 className="font-[family-name:var(--font-montserrat)] text-lg font-bold text-text mb-2">
+              Information We Collect
+            </h3>
             <ul className="list-disc list-inside space-y-2">
               <li>
                 <span className="font-semibold">Booking information:</span>{" "}
@@ -56,24 +126,20 @@ export default function Privacy() {
               browsing history, and we do not use the App to serve
               third-party advertising.
             </p>
-          </section>
 
-          <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
+            <h3 className="mt-6 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text mb-2">
               How We Use Information
-            </h2>
+            </h3>
             <ul className="list-disc list-inside space-y-2">
               <li>To schedule and confirm appointments</li>
               <li>To send appointment reminders and service-related notifications</li>
               <li>To respond to support requests and questions</li>
               <li>To maintain the security and reliability of the Services</li>
             </ul>
-          </section>
 
-          <section>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
+            <h3 className="mt-6 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text mb-2">
               How Information Is Stored
-            </h2>
+            </h3>
             <p>
               Booking and push notification data is stored using Supabase, a
               third-party database provider, on infrastructure they manage
@@ -84,11 +150,12 @@ export default function Privacy() {
 
           <section id="data-deletion">
             <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-primary mb-3">
-              Request Deletion of Your Data (AnchorTech Connect)
+              Request Deletion of Your Data
             </h2>
             <p>
-              To request deletion of the data AnchorTech Innovations holds
-              about you from the AnchorTech Connect app, email{" "}
+              This applies to both anchortech.org and the AnchorTech Connect
+              app. To request deletion of the data AnchorTech Innovations
+              holds about you, email{" "}
               <a
                 href="mailto:joshboepple@anchortech.org?subject=Data%20deletion%20request"
                 className="font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong"
@@ -96,14 +163,19 @@ export default function Privacy() {
                 joshboepple@anchortech.org
               </a>{" "}
               with the subject line &ldquo;Data deletion request&rdquo; and
-              the name and/or email address used when booking. We will
-              confirm and complete the deletion within 30 days.
+              the name and/or email address associated with your request
+              (whether that is a booking, a purchase, or a contact form
+              message). We will confirm and complete the deletion within 30
+              days.
             </p>
             <p className="mt-3">
               <span className="font-semibold">What gets deleted:</span> your
-              name, email address, and appointment/booking records stored in
-              our database, along with any device push token associated with
-              your account.
+              name, email address, appointment/booking records, contact form
+              messages, and purchase records stored in our database, along
+              with any device push token associated with your account. We
+              never store full card numbers, so there is nothing to delete
+              on that front &mdash; Stripe handles that data under its own
+              privacy policy.
             </p>
             <p className="mt-3">
               <span className="font-semibold">What is retained:</span> chat

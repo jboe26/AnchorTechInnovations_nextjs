@@ -1,45 +1,24 @@
-"use client";
-import { useState } from "react";
 import Section from "@/components/home/Section";
+import ContactForm from "@/components/ContactForm";
+
+export const metadata = {
+  title: "Contact",
+  description:
+    "Start the conversation. Share a bit about what you need, and get a clear quote before any work begins.",
+  openGraph: {
+    title: "Contact | AnchorTech Innovations",
+    description:
+      "Start the conversation. Share a bit about what you need, and get a clear quote before any work begins.",
+    url: "https://anchortech.org/contact",
+  },
+  twitter: {
+    title: "Contact | AnchorTech Innovations",
+    description:
+      "Start the conversation. Share a bit about what you need, and get a clear quote before any work begins.",
+  },
+};
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState("");
-
-  const encode = (data: Record<string, string>) =>
-    Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("Sending...");
-
-    try {
-      await fetch("/__forms.html", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", name, email, message }),
-      });
-      setStatus("Message sent! I'll be in touch soon.");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch {
-      setStatus("Something went wrong. Please try again.");
-    }
-  };
-
-  const inputClass =
-    "w-full rounded-md border border-muted/30 bg-white/[0.05] px-4 py-3 text-surface placeholder:text-muted outline-none transition focus:border-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong";
-
-  const labelClass =
-    "mb-1.5 block font-mono text-xs tracking-wider text-muted";
-
   return (
     <main>
       <section className="bg-surface text-text">
@@ -97,61 +76,7 @@ export default function Contact() {
             <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-surface">
               Send a message
             </h2>
-            <form
-              name="contact"
-              data-netlify="true"
-              onSubmit={handleSubmit}
-              className="mt-6 space-y-4"
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <div>
-                <label className={labelClass}>your name</label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="What should I call you?"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className={inputClass}
-                />
-              </div>
-              <div>
-                <label className={labelClass}>your email</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Where should I reply?"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className={inputClass}
-                />
-              </div>
-              <div>
-                <label className={labelClass}>message</label>
-                <textarea
-                  name="message"
-                  placeholder="Tell me about your project, your challenges, or what kind of support you're looking for."
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  rows={5}
-                  required
-                  className={inputClass}
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
-              >
-                Send message
-              </button>
-              {status && (
-                <p className="mt-2 text-center text-sm text-surface/80">
-                  {status}
-                </p>
-              )}
-            </form>
+            <ContactForm />
           </div>
         </div>
       </Section>
