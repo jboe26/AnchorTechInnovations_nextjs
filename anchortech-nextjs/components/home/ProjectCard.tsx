@@ -1,9 +1,16 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import type { Project } from "@/lib/data/projects";
 
-export default function ProjectCard({ name, description, href, status }: Project) {
+export default function ProjectCard({
+  name,
+  description,
+  href,
+  caseStudyHref,
+  status,
+}: Project) {
   const cardClass =
     "block rounded-lg border border-muted/30 bg-white p-6 shadow-sm transition hover:border-accent/60 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong";
 
@@ -15,9 +22,9 @@ export default function ProjectCard({ name, description, href, status }: Project
       <p className="mt-3 text-sm leading-relaxed text-text/70">
         {description}
       </p>
-      {href ? (
+      {caseStudyHref || href ? (
         <span className="mt-4 inline-block font-mono text-xs tracking-wide text-accent-strong">
-          view project &rarr;
+          {caseStudyHref ? "view case study" : "view project"} &rarr;
         </span>
       ) : (
         status && (
@@ -28,6 +35,16 @@ export default function ProjectCard({ name, description, href, status }: Project
       )}
     </>
   );
+
+  if (caseStudyHref) {
+    return (
+      <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+        <Link href={caseStudyHref} className={cardClass}>
+          {content}
+        </Link>
+      </motion.div>
+    );
+  }
 
   if (href) {
     return (
