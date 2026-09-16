@@ -42,6 +42,8 @@ export default function PricingCard({
         href={`mailto:joshboepple@anchortech.org?subject=${encodeURIComponent(
           `Starting a project: ${title}`
         )}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-6 inline-block w-full rounded-md border-2 border-primary px-4 py-2.5 text-center font-semibold text-primary transition hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         Start with {title}

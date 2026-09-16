@@ -100,6 +100,8 @@ export default function SupportPlanCard({
         href={`mailto:joshboepple@anchortech.org?subject=${encodeURIComponent(
           `Starting a partnership: ${name}`
         )}`}
+        target="_blank"
+        rel="noopener noreferrer"
         className={
           isDark
             ? "mt-6 inline-block w-full rounded-md bg-accent px-4 py-2.5 text-center font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
