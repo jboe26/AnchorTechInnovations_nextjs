@@ -44,7 +44,7 @@ export async function sendPricingInquiryEmails({
   priceLabel: string;
 }) {
   await resend.emails.send({
-    from: "AnchorTech Inquiries <inquiries@anchortech.org>",
+    from: "AnchorTech Innovations <pricing@anchortech.org>",
     to: "joshboepple@anchortech.org",
     replyTo: email,
     subject: `New pricing inquiry: ${planName}`,
