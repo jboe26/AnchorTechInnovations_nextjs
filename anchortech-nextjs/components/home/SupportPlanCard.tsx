@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { SupportPlan } from "@/lib/data/pricing";
+import PricingInquiryForm from "./PricingInquiryForm";
 
 export default function SupportPlanCard({
   name,
@@ -96,20 +97,16 @@ export default function SupportPlanCard({
           </li>
         ))}
       </ul>
-      <a
-        href={`mailto:joshboepple@anchortech.org?subject=${encodeURIComponent(
-          `Starting a partnership: ${name}`
-        )}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={
+      <PricingInquiryForm
+        planName={name}
+        priceLabel={`${price}${cadence}`}
+        isDark={isDark}
+        buttonClassName={
           isDark
             ? "mt-6 inline-block w-full rounded-md bg-accent px-4 py-2.5 text-center font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-on-dark"
             : "mt-6 inline-block w-full rounded-md border-2 border-primary px-4 py-2.5 text-center font-semibold text-primary transition hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         }
-      >
-        Start with {name}
-      </a>
+      />
     </motion.div>
   );
 }
