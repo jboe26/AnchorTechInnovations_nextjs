@@ -30,7 +30,7 @@ const processSteps = [
     step: "1",
     title: "Brand",
     description:
-      "Designed the logo and visual identity from scratch, before any of the site work started.",
+      "Built out a full visual identity around their existing logo, before any of the site work started.",
   },
   {
     step: "2",
@@ -71,9 +71,9 @@ export default function SpeechInnovationNCCaseStudy() {
             Starting a business online, from zero
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-text/70">
-            No website, no logo, no email. Speech Innovation NC needed a
-            full identity and online presence built from scratch, and
-            launched fast.
+            No website and no business email, just a basic logo. Speech
+            Innovation NC needed a full online presence built from scratch,
+            and launched fast.
           </p>
 
           <div className="mt-12 flex flex-wrap gap-10 border-y border-muted/30 py-6">
@@ -111,10 +111,10 @@ export default function SpeechInnovationNCCaseStudy() {
           The situation
         </h2>
         <p className="mt-3 max-w-2xl leading-relaxed text-text/70">
-          Speech Innovation NC was starting from nothing online. No logo, no
-          website, no business email. They needed a full identity and a
-          working web presence before they could look credible to a single
-          client.
+          Speech Innovation NC was starting with next to nothing online.
+          They had a basic logo, but no website and no business email. They
+          needed a full identity and a working web presence before they
+          could look credible to a single client.
         </p>
       </Section>
 
