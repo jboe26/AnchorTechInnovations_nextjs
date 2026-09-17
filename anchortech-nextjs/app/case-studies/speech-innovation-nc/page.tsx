@@ -162,10 +162,13 @@ export default function SpeechInnovationNCCaseStudy() {
       <Section id="quote" index={4} label="from the client" bg="dark">
         <div className="max-w-xl border-l-2 border-accent-on-dark pl-6">
           <p className="text-lg font-medium leading-relaxed text-surface">
-            Client quote coming soon.
+            &ldquo;Josh did an amazing job with our company&rsquo;s website.
+            He was very receptive to our specific needs and delivered a
+            final product that far exceeded our expectations. Josh is very
+            knowledgeable and creative!&rdquo;
           </p>
           <p className="mt-3 text-sm text-surface/60">
-            &mdash; Speech Innovation NC
+            &mdash; Armel Alvarez, Speech Innovation NC
           </p>
         </div>
       </Section>
