@@ -17,13 +17,19 @@ const jetbrainsMono = JetBrains_Mono({
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
   "@id": "https://anchortech.org/#organization",
   name: "AnchorTech Innovations",
   url: "https://anchortech.org",
   logo: "https://anchortech.org/logo2.png",
+  image: "https://anchortech.org/logo2.png",
   description:
     "Affordable web development and tech support for small businesses and organizations in the Charlotte area.",
+  priceRange: "$50-$2995",
+  areaServed: {
+    "@type": "City",
+    name: "Charlotte",
+  },
   address: {
     "@type": "PostalAddress",
     addressLocality: "Pineville",

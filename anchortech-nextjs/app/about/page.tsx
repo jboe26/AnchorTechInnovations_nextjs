@@ -1,5 +1,11 @@
 import Section from "@/components/home/Section";
 import CTABanner from "@/components/home/CTABanner";
+import { breadcrumbSchema } from "@/lib/breadcrumb-schema";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: "https://anchortech.org" },
+  { name: "About", url: "https://anchortech.org/about" },
+]);
 
 export const metadata = {
   title: "About",
@@ -21,6 +27,10 @@ export const metadata = {
 export default function About() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
           <p className="font-mono text-sm tracking-wide text-text/70">

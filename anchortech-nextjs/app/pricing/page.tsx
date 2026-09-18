@@ -2,6 +2,15 @@ import Section from "@/components/home/Section";
 import PricingContent from "@/components/home/PricingContent";
 import CTABanner from "@/components/home/CTABanner";
 import PricingInquiryForm from "@/components/home/PricingInquiryForm";
+import { tiers, supportPlans } from "@/lib/data/pricing";
+import { breadcrumbSchema } from "@/lib/breadcrumb-schema";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: "https://anchortech.org" },
+  { name: "Pricing", url: "https://anchortech.org/pricing" },
+]);
+
+const parsePrice = (price: string) => Number(price.replace(/[^0-9.]/g, ""));
 
 export const metadata = {
   title: "Pricing",
@@ -34,8 +43,67 @@ const aLaCarte = [
 ];
 
 export default function Pricing() {
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: [
+      ...tiers.map((tier, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Service",
+          name: tier.title,
+          description: tier.description,
+          provider: {
+            "@type": "Organization",
+            name: "AnchorTech Innovations",
+          },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "USD",
+            price: parsePrice(tier.price),
+            url: "https://anchortech.org/pricing",
+          },
+        },
+      })),
+      ...supportPlans.map((plan, index) => ({
+        "@type": "ListItem",
+        position: tiers.length + index + 1,
+        item: {
+          "@type": "Service",
+          name: plan.name,
+          description: plan.description,
+          provider: {
+            "@type": "Organization",
+            name: "AnchorTech Innovations",
+          },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "USD",
+            price: parsePrice(plan.price),
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price: parsePrice(plan.price),
+              priceCurrency: "USD",
+              billingDuration: "P1M",
+            },
+            url: "https://anchortech.org/pricing",
+          },
+        },
+      })),
+    ],
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
           <p className="font-mono text-sm tracking-wide text-text/70">

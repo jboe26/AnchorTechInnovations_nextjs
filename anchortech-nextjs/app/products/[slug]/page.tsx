@@ -3,6 +3,7 @@ import Section from "@/components/home/Section";
 import { getProductBySlug, formatPrice } from "@/lib/products";
 import { productContent } from "@/lib/data/product-content";
 import BuyButton from "@/components/products/BuyButton";
+import { breadcrumbSchema } from "@/lib/breadcrumb-schema";
 
 // Prices and product details are edited through /admin and should show up
 // immediately, not just after the next deploy.
@@ -57,8 +58,46 @@ export default async function ProductDetailPage({
     day: "numeric",
   });
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.short_description,
+    url: `https://anchortech.org/products/${product.slug}`,
+    brand: {
+      "@type": "Brand",
+      name: "AnchorTech Innovations",
+    },
+    offers: {
+      "@type": "Offer",
+      url: `https://anchortech.org/products/${product.slug}`,
+      priceCurrency: product.currency.toUpperCase(),
+      price: (product.price_cents / 100).toFixed(2),
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@type": "Organization",
+        name: "AnchorTech Innovations",
+      },
+    },
+  };
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Home", url: "https://anchortech.org" },
+    { name: "Products", url: "https://anchortech.org/products" },
+    { name: product.name, url: `https://anchortech.org/products/${product.slug}` },
+  ]);
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 text-center md:px-10 md:pt-32 md:pb-20">
           <p className="font-mono text-sm tracking-wide text-text/70">

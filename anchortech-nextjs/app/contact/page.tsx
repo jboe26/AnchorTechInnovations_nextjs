@@ -1,5 +1,11 @@
 import Section from "@/components/home/Section";
 import ContactForm from "@/components/ContactForm";
+import { breadcrumbSchema } from "@/lib/breadcrumb-schema";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: "https://anchortech.org" },
+  { name: "Contact", url: "https://anchortech.org/contact" },
+]);
 
 export const metadata = {
   title: "Contact",
@@ -21,6 +27,10 @@ export const metadata = {
 export default function Contact() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
           <p className="font-mono text-sm tracking-wide text-text/70">

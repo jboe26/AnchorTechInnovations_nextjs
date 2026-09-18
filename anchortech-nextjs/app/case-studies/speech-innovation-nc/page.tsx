@@ -3,6 +3,15 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Section from "@/components/home/Section";
 import CTABanner from "@/components/home/CTABanner";
+import { breadcrumbSchema } from "@/lib/breadcrumb-schema";
+
+const breadcrumbs = breadcrumbSchema([
+  { name: "Home", url: "https://anchortech.org" },
+  {
+    name: "Speech Innovation NC",
+    url: "https://anchortech.org/case-studies/speech-innovation-nc",
+  },
+]);
 
 export const metadata: Metadata = {
   title: "Speech Innovation NC case study",
@@ -52,9 +61,43 @@ const results = [
   { number: "5 mo", label: "Start to launch" },
 ];
 
+const caseStudySchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Starting a business online, from zero",
+  description:
+    "How Speech Innovation NC went from no online presence to a live, fully branded business: logo, website, domain, hosting, and email built and launched in five months.",
+  image: "https://anchortech.org/case-studies/speech-innovation-nc.png",
+  datePublished: "2025-12-01",
+  author: {
+    "@type": "Person",
+    name: "Josh Boepple",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "AnchorTech Innovations",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://anchortech.org/logo2.png",
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": "https://anchortech.org/case-studies/speech-innovation-nc",
+  },
+};
+
 export default function SpeechInnovationNCCaseStudy() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 md:px-10 md:pt-32">
           <Link
