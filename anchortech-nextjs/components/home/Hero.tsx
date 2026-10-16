@@ -34,24 +34,24 @@ export default function Hero() {
               variants={heroItem}
               className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
-              No account managers. No agency playbook stretched to fit. Just
-              direct access to the person writing the code, from first call
-              to launch.
+              I&apos;m Josh Boepple. I design and build every site myself.
+              Sites start at $650, one-time, with clear pricing and no
+              agency runaround.
             </motion.p>
 
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
-              <Link
-                href="/pricing"
+              <a
+                href="mailto:joshboepple@anchortech.org"
                 className="rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
-                View pricing
-              </Link>
-              <a
-                href="#projects"
+                Get a free quote
+              </a>
+              <Link
+                href="/pricing"
                 className="rounded-md border-2 border-primary px-6 py-3 font-semibold text-primary transition hover:bg-primary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
-                See the work
-              </a>
+                See pricing
+              </Link>
             </motion.div>
           </div>
 

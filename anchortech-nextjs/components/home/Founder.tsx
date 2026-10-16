@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Founder() {
   return (
-    <Section id="founder" index={4} label="who's building this" bg="dark">
+    <Section id="founder" index={5} label="who's building this" bg="dark">
       <div className="grid gap-10 sm:grid-cols-[auto_1fr] sm:items-center">
         <Image
           src="/FounderPhoto.jpeg"

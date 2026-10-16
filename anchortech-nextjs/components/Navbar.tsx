@@ -35,9 +35,6 @@ export default function Navbar() {
           <Link href="/about" className={linkClass}>
             About
           </Link>
-          <Link href="/#projects" className={linkClass}>
-            Work
-          </Link>
           <Link href="/pricing" className={linkClass}>
             Pricing
           </Link>
@@ -74,13 +71,6 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             About
-          </Link>
-          <Link
-            href="/#projects"
-            className={linkClass}
-            onClick={() => setIsOpen(false)}
-          >
-            Work
           </Link>
           <Link
             href="/pricing"
