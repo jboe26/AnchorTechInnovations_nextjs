@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import WhyWorkTogether from "@/components/home/WhyWorkTogether";
 import Services from "@/components/home/Services";
+import Process from "@/components/home/Process";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Founder from "@/components/home/Founder";
 import Pricing from "@/components/home/Pricing";
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <WhyWorkTogether />
       <Services />
+      <Process />
       <FeaturedProjects />
       <Founder />
       <Pricing />
