@@ -27,13 +27,14 @@ export default function Hero() {
               variants={heroItem}
               className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl"
             >
-              Websites built by the developer who ships them.
+              Designed and built by the person you're talking to.
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
+<<<<<<< HEAD
               I&apos;m Josh Boepple. I design and build every site myself.
               Sites start at $650, one-time, with clear pricing and no
               agency runaround.
@@ -42,6 +43,19 @@ export default function Hero() {
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
               <a
                 href="mailto:joshboepple@anchortech.org"
+=======
+              No account managers. No agency playbook stretched to fit. Just
+              direct access to the person writing the code, from first call to
+              launch.
+            </motion.p>
+
+            <motion.div
+              variants={heroItem}
+              className="mt-9 flex flex-wrap gap-4"
+            >
+              <Link
+                href="/pricing"
+>>>>>>> 73619aa (updated Hero tagline)
                 className="rounded-md bg-accent px-6 py-3 font-semibold text-white transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
               >
                 Get a free quote
@@ -77,7 +91,8 @@ export default function Hero() {
                   {"{"}
                 </p>
                 <p className="pl-4">
-                  client: <span className="text-accent-on-dark">&quot;you&quot;</span>,
+                  client:{" "}
+                  <span className="text-accent-on-dark">&quot;you&quot;</span>,
                 </p>
                 <p className="pl-4">
                   scope:{" "}
