@@ -34,9 +34,9 @@ export default function Hero() {
               variants={heroItem}
               className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
-              No account managers. No agency playbook stretched to fit. Just
-              direct access to the person writing the code, from first call
-              to launch.
+              I&apos;m Josh Boepple. I design and build every site myself.
+              Sites start at $650, one-time, with clear pricing and no
+              agency runaround.
             </motion.p>
 
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
