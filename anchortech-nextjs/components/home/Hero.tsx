@@ -53,17 +53,6 @@ export default function Hero() {
                 See pricing
               </Link>
             </motion.div>
-
-            <motion.p
-              variants={heroItem}
-              className="mt-6 text-sm text-text/60"
-            >
-              Trusted locally:{" "}
-              <span className="font-semibold text-text/80">
-                Speech Innovation NC · Mickey Herring Taxidermy · Foundry
-                &amp; Fur
-              </span>
-            </motion.p>
           </div>
 
           <motion.div variants={heroItem}>
