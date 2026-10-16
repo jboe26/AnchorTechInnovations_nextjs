@@ -13,6 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/privacy",
     "/terms",
     "/case-studies/speech-innovation-nc",
+    "/case-studies/mickey-herring-taxidermy",
   ].map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),

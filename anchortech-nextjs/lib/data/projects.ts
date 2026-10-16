@@ -19,6 +19,7 @@ export const projects: Project[] = [
     description:
       "Rebuilt on Next.js and Tailwind. He's now the top-ranked taxidermist in his area.",
     href: "https://www.mickeyherringtaxidermy.org/",
+    caseStudyHref: "/case-studies/mickey-herring-taxidermy",
   },
   {
     name: "Foundry & Fur",
