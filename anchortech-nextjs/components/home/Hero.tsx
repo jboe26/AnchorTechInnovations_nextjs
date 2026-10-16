@@ -27,16 +27,16 @@ export default function Hero() {
               variants={heroItem}
               className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl"
             >
-              A website that brings your small business more customers.
+              Websites built by the developer who ships them.
             </motion.h1>
 
             <motion.p
               variants={heroItem}
               className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
-              I&apos;m Josh Boepple. I design and build every site myself.
-              Sites start at $650, one-time, with clear pricing and no
-              agency runaround.
+              No account managers. No agency playbook stretched to fit. Just
+              direct access to the person writing the code, from first call
+              to launch.
             </motion.p>
 
             <motion.div variants={heroItem} className="mt-9 flex flex-wrap gap-4">
