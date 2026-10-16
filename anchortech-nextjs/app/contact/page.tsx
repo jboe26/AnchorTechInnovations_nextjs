@@ -86,7 +86,45 @@ export default function Contact() {
             <h2 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-surface">
               Send a message
             </h2>
+            <p className="mt-2 text-sm text-surface/70">
+              I reply within one business day.
+            </p>
             <ContactForm />
+          </div>
+        </div>
+      </Section>
+
+      <Section id="what-next" index={2} label="what happens next" bg="light">
+        <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
+          What happens next
+        </h2>
+        <div className="mt-10 grid gap-5 sm:grid-cols-3">
+          <div className="rounded-lg border border-muted/40 bg-white p-6">
+            <p className="font-mono text-sm font-bold text-accent">01</p>
+            <h3 className="mt-3 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text">
+              You reach out
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-text/70">
+              Tell me about your project in the form above.
+            </p>
+          </div>
+          <div className="rounded-lg border border-muted/40 bg-white p-6">
+            <p className="font-mono text-sm font-bold text-accent">02</p>
+            <h3 className="mt-3 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text">
+              Short call
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-text/70">
+              We talk through what you need. No pressure, no pitch.
+            </p>
+          </div>
+          <div className="rounded-lg border border-muted/40 bg-white p-6">
+            <p className="font-mono text-sm font-bold text-accent">03</p>
+            <h3 className="mt-3 font-[family-name:var(--font-montserrat)] text-lg font-bold text-text">
+              Clear quote
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-text/70">
+              You get upfront pricing before any work begins.
+            </p>
           </div>
         </div>
       </Section>
