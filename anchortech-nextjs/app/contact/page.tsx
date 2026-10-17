@@ -79,6 +79,28 @@ export default function Contact() {
                 partnerships.
               </p>
             </div>
+            <div>
+              <p className="font-mono text-xs tracking-wider text-muted">
+                app
+              </p>
+              <p className="mt-1 text-surface/80">
+                Prefer to book direct? Grab AnchorTech Connect to schedule
+                a call, get quick answers, and reach me after hours.
+              </p>
+              <a
+                href="https://apps.apple.com/app/id6801302152"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download AnchorTech Connect on the App Store"
+                className="mt-3 inline-block transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
+              >
+                <img
+                  src="/app-store-badge.svg"
+                  alt="Download on the App Store"
+                  className="h-10 w-auto"
+                />
+              </a>
+            </div>
           </div>
 
           {/* Form */}
