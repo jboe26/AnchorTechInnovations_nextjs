@@ -100,6 +100,7 @@ export const supportPlans: SupportPlan[] = [
     name: "AnchorCare Plus",
     price: "$249",
     cadence: "/mo",
+    yearlyNote: "$2,180/year if billed annually",
     theme: "light",
     tagline: "For sites that need a little forward motion each month",
     description:
@@ -118,6 +119,7 @@ export const supportPlans: SupportPlan[] = [
     name: "Anchor Alliance",
     price: "$399",
     cadence: "/mo",
+    yearlyNote: "$3,493/year if billed annually",
     theme: "dark",
     tagline: "For long-term partnership and ongoing support",
     description:
