@@ -116,7 +116,7 @@ export const supportPlans: SupportPlan[] = [
   {
     id: "alliance",
     name: "Anchor Alliance",
-    price: "$599",
+    price: "$399",
     cadence: "/mo",
     theme: "dark",
     tagline: "For long-term partnership and ongoing support",
