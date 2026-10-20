@@ -101,6 +101,23 @@ export default function Contact() {
                 />
               </a>
             </div>
+            <div>
+              <p className="font-mono text-xs tracking-wider text-muted">
+                book a call
+              </p>
+              <p className="mt-1 text-surface/80">
+                Rather talk it out? Book a free initial consultation at
+                a time that works for you.
+              </p>
+              <a
+                href="https://calendly.com/anchortechinnovations/initial-consultation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-block font-semibold text-accent-strong underline decoration-accent-strong/40 underline-offset-4 transition hover:decoration-accent-strong focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-strong"
+              >
+                Book a free consultation
+              </a>
+            </div>
           </div>
 
           {/* Form */}
