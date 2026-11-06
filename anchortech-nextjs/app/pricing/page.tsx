@@ -1,5 +1,6 @@
 import Section from "@/components/home/Section";
 import PricingContent from "@/components/home/PricingContent";
+import PayingForIt from "@/components/home/PayingForIt";
 import CTABanner from "@/components/home/CTABanner";
 import PricingInquiryForm from "@/components/home/PricingInquiryForm";
 import { tiers, supportPlans } from "@/lib/data/pricing";
@@ -15,17 +16,17 @@ const parsePrice = (price: string) => Number(price.replace(/[^0-9.]/g, ""));
 export const metadata = {
   title: "Pricing",
   description:
-    "Clear pricing, no gimmicks. One-time website packages starting at $650, ongoing care plans, and a la carte tech help starting at $50.",
+    "Clear pricing, no gimmicks. One-time website packages starting at $795, ongoing care plans, and a la carte tech help starting at $50.",
   openGraph: {
     title: "Pricing | AnchorTech Innovations",
     description:
-      "Clear pricing, no gimmicks. One-time website packages starting at $650, ongoing care plans, and a la carte tech help starting at $50.",
+      "Clear pricing, no gimmicks. One-time website packages starting at $795, ongoing care plans, and a la carte tech help starting at $50.",
     url: "https://anchortech.org/pricing",
   },
   twitter: {
     title: "Pricing | AnchorTech Innovations",
     description:
-      "Clear pricing, no gimmicks. One-time website packages starting at $650, ongoing care plans, and a la carte tech help starting at $50.",
+      "Clear pricing, no gimmicks. One-time website packages starting at $795, ongoing care plans, and a la carte tech help starting at $50.",
   },
 };
 
@@ -47,25 +48,32 @@ export default function Pricing() {
     "@context": "https://schema.org",
     "@type": "ItemList",
     itemListElement: [
-      ...tiers.map((tier, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
-        item: {
-          "@type": "Service",
-          name: tier.title,
-          description: tier.description,
-          provider: {
-            "@type": "Organization",
-            name: "AnchorTech Innovations",
+      ...tiers.map((tier, index) => {
+        const priceValue = parsePrice(tier.price);
+        return {
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "Service",
+            name: tier.title,
+            description: tier.description,
+            provider: {
+              "@type": "Organization",
+              name: "AnchorTech Innovations",
+            },
+            ...(priceValue > 0
+              ? {
+                  offers: {
+                    "@type": "Offer",
+                    priceCurrency: "USD",
+                    price: priceValue,
+                    url: "https://anchortech.org/pricing",
+                  },
+                }
+              : {}),
           },
-          offers: {
-            "@type": "Offer",
-            priceCurrency: "USD",
-            price: parsePrice(tier.price),
-            url: "https://anchortech.org/pricing",
-          },
-        },
-      })),
+        };
+      }),
       ...supportPlans.map((plan, index) => ({
         "@type": "ListItem",
         position: tiers.length + index + 1,
@@ -124,7 +132,11 @@ export default function Pricing() {
         <PricingContent />
       </Section>
 
-      <Section id="a-la-carte" index={2} label="a la carte" bg="light">
+      <Section id="paying-for-it" index={2} label="paying for it" bg="dark">
+        <PayingForIt />
+      </Section>
+
+      <Section id="a-la-carte" index={3} label="a la carte" bg="light">
         <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-text sm:text-4xl">
           Custom &agrave; la carte tech help
         </h2>
