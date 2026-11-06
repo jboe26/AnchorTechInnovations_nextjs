@@ -2,6 +2,8 @@ export type PricingTier = {
   title: string;
   price: string;
   cadence: string;
+  priceNote?: string;
+  badge?: string;
   subtitle: string;
   description: string;
   features: string[];
@@ -10,8 +12,9 @@ export type PricingTier = {
 export const tiers: PricingTier[] = [
   {
     title: "Anchor Foundation",
-    price: "$650",
+    price: "$795",
     cadence: "one-time",
+    priceNote: "or split over up to 12 months",
     subtitle: "For those getting started",
     description:
       "A clean, intentional website that gives you a solid, editable foundation online, built on the platform that fits you best.",
@@ -25,8 +28,10 @@ export const tiers: PricingTier[] = [
   },
   {
     title: "Anchor Growth",
-    price: "$1,350",
+    price: "$1,995",
     cadence: "one-time",
+    priceNote: "or split over up to 12 months",
+    badge: "Most chosen",
     subtitle: "For those strengthening their identity",
     description:
       "A more complete online presence with refined structure, better flow, and tools that help you grow confidently.",
@@ -37,12 +42,14 @@ export const tiers: PricingTier[] = [
       "Contact form + basic automations",
       "2-month support + training",
       "Platform-flexible",
+      "Google Business Profile setup included",
     ],
   },
   {
     title: "Anchor Elevate",
     price: "$2,995",
     cadence: "one-time",
+    priceNote: "or split over up to 12 months",
     subtitle: "For those stepping into their full potential",
     description:
       "A fully customized website with strategic structure, marketing tools, and analytics to support real growth.",
@@ -55,6 +62,15 @@ export const tiers: PricingTier[] = [
       "4-month support included",
       "Platform-flexible",
     ],
+  },
+  {
+    title: "Custom Quote",
+    price: "Contact for more",
+    cadence: "",
+    subtitle: "A range after a short call, at $45 an hour",
+    description:
+      "For work bigger than a package: multi location businesses, large online stores, and organizations with many pages or integrations. Deposit up front, work in phases, written sign off at each phase.",
+    features: ["Pay by phase, or split over up to 12 months"],
   },
 ];
 
