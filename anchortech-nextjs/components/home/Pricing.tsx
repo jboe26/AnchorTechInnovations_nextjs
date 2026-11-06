@@ -8,7 +8,7 @@ export default function Pricing() {
         Pricing
       </h2>
       <p className="mt-4 max-w-lg text-text/70">
-        Sites start at $650, one-time. Ongoing partnerships and care plans
+        Sites start at $795, one-time. Ongoing partnerships and care plans
         are available once you&apos;re live.
       </p>
       <Link

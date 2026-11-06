@@ -35,7 +35,7 @@ export default function Hero() {
               className="mt-6 max-w-lg text-lg leading-relaxed text-text/70"
             >
               I&apos;m Josh Boepple. I design and build every site myself. Sites
-              start at $650, one-time, with clear pricing and no agency
+              start at $795, one-time, with clear pricing and no agency
               runaround.
             </motion.p>
 

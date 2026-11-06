@@ -6,7 +6,7 @@ const services = [
     title: "Business websites",
     description:
       "A site built around what your business actually needs, not a stretched template.",
-    price: "From $650",
+    price: "From $795",
   },
   {
     title: "Ongoing site care",

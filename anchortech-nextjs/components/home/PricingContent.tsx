@@ -10,10 +10,16 @@ export default function PricingContent() {
       </h2>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {tiers.map((tier) => (
+        {tiers.slice(0, 3).map((tier) => (
           <PricingCard key={tier.title} {...tier} />
         ))}
       </div>
+
+      {tiers.slice(3).map((tier) => (
+        <div key={tier.title} className="mt-5">
+          <PricingCard {...tier} />
+        </div>
+      ))}
 
       <div className="mt-14 border-t border-muted/30 pt-14">
         <p className="font-mono text-xs tracking-wider text-muted">
