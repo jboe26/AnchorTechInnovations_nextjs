@@ -3,7 +3,8 @@ import crypto from "node:crypto";
 import type Stripe from "stripe";
 import { stripe } from "@/lib/stripe";
 import { supabaseAdmin } from "@/lib/supabase/admin";
-import { sendDeliveryEmail } from "@/lib/email";
+import { sendDeliveryEmail, sendClassConfirmationEmail } from "@/lib/email";
+import { getScheduledClass, directionsUrl } from "@/lib/data/classes";
 
 export async function POST(request: NextRequest) {
   // Must read the raw body -- constructEvent needs the exact bytes Stripe
@@ -33,7 +34,53 @@ export async function POST(request: NextRequest) {
       .maybeSingle();
 
     if (lookupError || !purchase) {
-      // No matching purchase row for this session -- nothing to do.
+      // Not a storefront purchase. It may be a class registration paid
+      // through the class payment link, which carries the registration
+      // id as client_reference_id.
+      const registrationId = session.client_reference_id;
+      if (registrationId) {
+        const { data: registration } = await supabaseAdmin
+          .from("class_registrations")
+          .select("*")
+          .eq("id", registrationId)
+          .maybeSingle();
+
+        if (registration) {
+          // Conditional on pending_payment so a retried event cannot
+          // reprocess or resend the confirmation.
+          const { data: updatedRegistration } = await supabaseAdmin
+            .from("class_registrations")
+            .update({ status: "paid", stripe_session_id: session.id })
+            .eq("id", registration.id)
+            .eq("status", "pending_payment")
+            .select()
+            .maybeSingle();
+
+          if (updatedRegistration) {
+            const cls = getScheduledClass(registration.class_slug);
+            try {
+              await sendClassConfirmationEmail({
+                to: registration.email,
+                name: registration.name,
+                classTitle: registration.class_title,
+                dateLabel: cls?.dateLabel ?? registration.class_when,
+                timeLabel: cls?.timeLabel ?? "",
+                venue: cls?.venue ?? registration.class_where,
+                room: cls?.room,
+                address: cls?.address ?? "",
+                directions: cls ? directionsUrl(cls) : "https://anchortech.org/classes",
+                paid: true,
+              });
+              await supabaseAdmin
+                .from("class_registrations")
+                .update({ confirmation_sent: true })
+                .eq("id", registration.id);
+            } catch (err) {
+              console.error("Failed to send class confirmation email:", err);
+            }
+          }
+        }
+      }
       return NextResponse.json({ received: true });
     }
 
