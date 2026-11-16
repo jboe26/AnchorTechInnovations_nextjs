@@ -71,3 +71,103 @@ Josh Boepple
 AnchorTech Innovations`,
   });
 }
+
+export async function sendClassConfirmationEmail({
+  to,
+  name,
+  classTitle,
+  dateLabel,
+  timeLabel,
+  venue,
+  room,
+  address,
+  directions,
+  paid,
+}: {
+  to: string;
+  name: string;
+  classTitle: string;
+  dateLabel: string;
+  timeLabel: string;
+  venue: string;
+  room?: string;
+  address: string;
+  directions: string;
+  paid: boolean;
+}) {
+  const where = `${venue}${room ? `, ${room}` : ""}\n${address}`;
+  const moneyLine = paid
+    ? "Payment received: $15. Stripe emailed your receipt separately."
+    : "This class is free for you. Nothing to pay.";
+  await resend.emails.send({
+    from: "Josh Boepple <joshboepple@anchortech.org>",
+    to,
+    subject: `You are registered: ${classTitle}, ${dateLabel}`,
+    text: `You are registered for this class. Your seat is saved.
+
+${classTitle}
+${dateLabel} · ${timeLabel}
+${where}
+Directions: ${directions}
+
+${moneyLine}
+
+What to bring: your phone or tablet, and any questions you have been saving up.
+
+Plans change? Just reply to this email and I will take care of it.
+
+Josh Boepple · AnchorTech Innovations
+joshboepple@anchortech.org · (803) 331-0716 · anchortech.org/classes`,
+  });
+
+  await resend.emails.send({
+    from: "AnchorTech Innovations <joshboepple@anchortech.org>",
+    to: "joshboepple@anchortech.org",
+    replyTo: to,
+    subject: `Class registration: ${classTitle} (${paid ? "paid" : "free"})`,
+    text: `New registration for ${classTitle} on ${dateLabel} at ${venue}.
+
+Name: ${name}
+Email: ${to}
+Type: ${paid ? "Paid ($15 via Stripe)" : "Free first class"}`,
+  });
+}
+
+export async function sendTopicRequestEmails({
+  name,
+  email,
+  topic,
+  location,
+}: {
+  name: string;
+  email: string;
+  topic: string;
+  location: string;
+}) {
+  await resend.emails.send({
+    from: "AnchorTech Innovations <joshboepple@anchortech.org>",
+    to: "joshboepple@anchortech.org",
+    replyTo: email,
+    subject: `Class topic request: ${topic}`,
+    text: `New topic request from the classes page.
+
+Name: ${name}
+Email: ${email}
+Topic: ${topic}
+Town or center: ${location}`,
+  });
+
+  await resend.emails.send({
+    from: "Josh Boepple <joshboepple@anchortech.org>",
+    to: email,
+    subject: "Got your topic request — AnchorTech Innovations",
+    text: `Thanks for the suggestion. I read every request myself, and when enough people in one place ask for the same topic, that becomes the next class scheduled there.
+
+Your request: ${topic}
+
+New class dates are posted at anchortech.org/classes as they are scheduled.
+
+Josh Boepple
+AnchorTech Innovations`,
+  });
+}
