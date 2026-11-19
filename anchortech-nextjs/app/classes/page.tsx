@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Section from "@/components/home/Section";
+import CTABanner from "@/components/home/CTABanner";
 import TopicRequestForm from "@/components/classes/TopicRequestForm";
 import { classTopics, scheduledClasses } from "@/lib/data/classes";
 import { breadcrumbSchema } from "@/lib/breadcrumb-schema";
@@ -28,20 +29,20 @@ export const metadata = {
 
 export default function Classes() {
   return (
-    <>
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
-      <section className="bg-surface-dark text-surface">
+      <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-20 text-center md:px-10 md:pt-32 md:pb-24">
-          <p className="font-mono text-sm tracking-wide text-accent-on-dark">
-            ANCHORTECH.ORG/CLASSES
+          <p className="font-mono text-sm tracking-wide text-text/70">
+            AnchorTech Innovations // classes
           </p>
           <h1 className="mt-6 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             Technology Classes for Everyone
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-surface/80">
+          <p className="mt-6 text-lg leading-relaxed text-text/70">
             Friendly, hands-on technology classes at community centers and
             libraries across the Carolinas. Your first class is free. Register
             below with your email and you are in.
@@ -49,7 +50,7 @@ export default function Classes() {
         </div>
       </section>
 
-      <Section id="upcoming" index={1} label="UPCOMING CLASSES">
+      <Section id="upcoming" index={1} label="upcoming classes">
         <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-text">
           Upcoming classes
         </h2>
@@ -107,7 +108,7 @@ export default function Classes() {
         </div>
       </Section>
 
-      <Section id="topics" index={2} label="CLASS TOPICS" bg="dark">
+      <Section id="topics" index={2} label="class topics" bg="dark">
         <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight">
           What gets taught
         </h2>
@@ -136,7 +137,7 @@ export default function Classes() {
         </div>
       </Section>
 
-      <Section id="request" index={3} label="REQUEST A TOPIC">
+      <Section id="request" index={3} label="request a topic">
         <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-extrabold tracking-tight text-text">
           Do not see the topic you want?
         </h2>
@@ -148,6 +149,8 @@ export default function Classes() {
           <TopicRequestForm />
         </div>
       </Section>
-    </>
+
+      <CTABanner />
+    </main>
   );
 }
