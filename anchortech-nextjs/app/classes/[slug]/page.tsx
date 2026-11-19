@@ -37,21 +37,21 @@ export default async function ClassDetail({
 
   return (
     <>
-      <section className="bg-surface-dark text-surface">
+      <section className="bg-surface text-text">
         <div className="mx-auto max-w-3xl px-6 pt-24 pb-16 md:px-10 md:pt-32">
-          <p className="font-mono text-sm tracking-wide text-accent-on-dark">
-            CLASS DETAILS
+          <p className="font-mono text-sm tracking-wide text-text/70">
+            AnchorTech Innovations // class details
           </p>
           <h1 className="mt-5 font-[family-name:var(--font-montserrat)] text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
             {cls.title}
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-surface/80">
+          <p className="mt-5 text-lg leading-relaxed text-text/70">
             {cls.description}
           </p>
         </div>
       </section>
 
-      <Section id="details" index={1} label="ABOUT THIS CLASS">
+      <Section id="details" index={1} label="about this class">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
             <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-text">
