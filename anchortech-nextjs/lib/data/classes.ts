@@ -70,42 +70,7 @@ export type ScheduledClass = {
 };
 
 // Booked classes, soonest first. Empty until the first partner schedules.
-export const scheduledClasses: ScheduledClass[] = [
-  {
-    slug: "test-phone-class",
-    title: "TEST: Your Phone, Made Simple",
-    description:
-      "Test listing only, used to check the registration flow. Not a real session.",
-    learn: [
-      "The settings that matter, in plain language",
-      "Sending photos and messages without the struggle",
-      "Making text bigger and your phone easier to read",
-    ],
-    venue: "Belle Johnston Community Center",
-    address: "1000 Johnston Drive, Pineville, NC 28134",
-    dateISO: "2026-12-14",
-    dateLabel: "Monday, December 14, 2026 (test date)",
-    timeLabel: "10:00 AM, one hour",
-    capacity: 20,
-  },
-  {
-    slug: "test-safety-class",
-    title: "TEST: Staying Safe Online",
-    description:
-      "Test listing only, used to check the paid registration flow. Not a real session.",
-    learn: [
-      "The 5 signs of a scam message",
-      "Passwords that actually protect you",
-      "What to do if you already clicked",
-    ],
-    venue: "Bazemore Active Adult Center",
-    address: "500 West Jefferson Street, Monroe, NC 28112",
-    dateISO: "2026-12-16",
-    dateLabel: "Wednesday, December 16, 2026 (test date)",
-    timeLabel: "10:00 AM, one hour",
-    capacity: 20,
-  },
-];
+export const scheduledClasses: ScheduledClass[] = [];
 
 export function getScheduledClass(slug: string) {
   return scheduledClasses.find((c) => c.slug === slug);
