@@ -70,7 +70,25 @@ export type ScheduledClass = {
 };
 
 // Booked classes, soonest first. Empty until the first partner schedules.
-export const scheduledClasses: ScheduledClass[] = [];
+export const scheduledClasses: ScheduledClass[] = [
+  {
+    slug: "test-phone-class",
+    title: "TEST: Your Phone, Made Simple",
+    description:
+      "Test listing only, used to check the registration flow. Not a real session.",
+    learn: [
+      "The settings that matter, in plain language",
+      "Sending photos and messages without the struggle",
+      "Making text bigger and your phone easier to read",
+    ],
+    venue: "Belle Johnston Community Center",
+    address: "1000 Johnston Drive, Pineville, NC 28134",
+    dateISO: "2026-12-14",
+    dateLabel: "Monday, December 14, 2026 (test date)",
+    timeLabel: "10:00 AM, one hour",
+    capacity: 20,
+  },
+];
 
 export function getScheduledClass(slug: string) {
   return scheduledClasses.find((c) => c.slug === slug);
