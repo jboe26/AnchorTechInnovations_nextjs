@@ -88,6 +88,23 @@ export const scheduledClasses: ScheduledClass[] = [
     timeLabel: "10:00 AM, one hour",
     capacity: 20,
   },
+  {
+    slug: "test-safety-class",
+    title: "TEST: Staying Safe Online",
+    description:
+      "Test listing only, used to check the paid registration flow. Not a real session.",
+    learn: [
+      "The 5 signs of a scam message",
+      "Passwords that actually protect you",
+      "What to do if you already clicked",
+    ],
+    venue: "Bazemore Active Adult Center",
+    address: "500 West Jefferson Street, Monroe, NC 28112",
+    dateISO: "2026-12-16",
+    dateLabel: "Wednesday, December 16, 2026 (test date)",
+    timeLabel: "10:00 AM, one hour",
+    capacity: 20,
+  },
 ];
 
 export function getScheduledClass(slug: string) {
