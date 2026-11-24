@@ -133,6 +133,43 @@ Type: ${paid ? "Paid ($15 via Stripe)" : "Free first class"}`,
   });
 }
 
+export async function sendClassPaymentReminderEmail({
+  to,
+  name,
+  classTitle,
+  classWhen,
+  classWhere,
+  paymentUrl,
+}: {
+  to: string;
+  name: string;
+  classTitle: string;
+  classWhen: string;
+  classWhere: string;
+  paymentUrl: string;
+}) {
+  await resend.emails.send({
+    from: "Josh Boepple <joshboepple@anchortech.org>",
+    to,
+    subject: `Finish your registration: ${classTitle}`,
+    text: `You started registering for this class, and your seat is being held for now:
+
+${classTitle}
+${classWhen}
+${classWhere}
+
+The last step is the $15 payment, which takes about a minute:
+${paymentUrl}
+
+If you decided not to come, no problem at all. Just ignore this email and I will release the seat.
+
+Questions? Just reply to this email.
+
+Josh Boepple · AnchorTech Innovations
+joshboepple@anchortech.org · (803) 331-0716 · anchortech.org/classes`,
+  });
+}
+
 export async function sendTopicRequestEmails({
   name,
   email,
