@@ -6,6 +6,7 @@ export default function TopicRequestForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [topic, setTopic] = useState("");
+  const [center, setCenter] = useState("");
   const [location, setLocation] = useState("");
   const [website, setWebsite] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -36,7 +37,13 @@ export default function TopicRequestForm() {
       const res = await fetch("/api/topic-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, topic, location, website }),
+        body: JSON.stringify({
+          name,
+          email,
+          topic,
+          location: center === "other" ? location : center,
+          website,
+        }),
       });
       if (!res.ok) {
         const body = await res.json().catch(() => null);
@@ -104,16 +111,40 @@ export default function TopicRequestForm() {
       </div>
       <div className="mt-4">
         <label htmlFor={locationId} className={labelClass}>
-          Your town or the center you attend
+          The center you attend
         </label>
-        <input
+        <select
           id={locationId}
-          type="text"
           required
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
+          value={center}
+          onChange={(e) => setCenter(e.target.value)}
           className={inputClass}
-        />
+        >
+          <option value="" disabled>
+            Choose your center
+          </option>
+          <option value="Berewick Recreation Center, Charlotte">
+            Berewick Recreation Center, Charlotte
+          </option>
+          <option value="Belle Johnston Community Center, Pineville">
+            Belle Johnston Community Center, Pineville
+          </option>
+          <option value="Bazemore Active Adult Center, Monroe">
+            Bazemore Active Adult Center, Monroe
+          </option>
+          <option value="other">Somewhere else</option>
+        </select>
+        {center === "other" && (
+          <input
+            type="text"
+            required
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            className={`${inputClass} mt-3`}
+            placeholder="Your town or the center you attend"
+            aria-label="Your town or the center you attend"
+          />
+        )}
       </div>
       {/* Honeypot: hidden from people, filled by bots. */}
       <div aria-hidden="true" className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden">
